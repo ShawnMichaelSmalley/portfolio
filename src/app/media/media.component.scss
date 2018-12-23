@@ -78,9 +78,15 @@ $tile-8-color: rgba(191,54,12,0.5);
 // Fit slider images within their containers, no background color
 .slider .slides {
     background-color: transparent;
-    li img {
-        max-width : 100%;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-    }
+}
+#DigitalBillboards .slider .slides li img {
+    max-width : 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+#SocialMediaPosts .slider .slides li img {
+    max-width : 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
