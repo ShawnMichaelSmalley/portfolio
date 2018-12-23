@@ -1,76 +1,18 @@
-$tile-1-color: rgba(183,28,28,0.5);
-$tile-2-color: rgba(245,127,23,0.5);
-$tile-3-color: rgba(27,94,32,0.5);
-$tile-4-color: rgba(13,71,161,0.5);
-$tile-5-color: rgba(121,85,72,0.5);
-$tile-6-color: rgba(136,14,79,0.5);
-$tile-7-color: rgba(0,96,100,0.5);
-$tile-8-color: rgba(191,54,12,0.5);
-
-.tiles-grid {
-    // Alternating colors for tile hover effects
-    .tile-1 {
-        .slide-back {
-            background: $tile-1-color;
-        }
-        &:hover {
-            outline: $tile-1-color solid 4px;
-        }
+// Soft green color scheme for tabs
+.tabs {
+    /deep/ & .indicator {
+        background-color: rgba(76,175,80,1);
     }
-    .tile-2 {
-        .slide-back {
-            background: $tile-2-color;
-        }
+    .tab a {
+        background-color: rgba(232,245,233,0.6);
+        color: rgba(76,175,80,0.7);
         &:hover {
-            outline: $tile-2-color solid 4px;
+            background-color: rgba(232,245,233,0.3);
+            color: rgba(76,175,80,1);
         }
-    }
-    .tile-3 {
-        .slide-back {
-            background: $tile-3-color;
-        }
-        &:hover {
-            outline: $tile-3-color solid 4px;
-        }
-    }
-    .tile-4 {
-        .slide-back {
-            background: $tile-4-color;
-        }
-        &:hover {
-            outline: $tile-4-color solid 4px;
-        }
-    }
-    .tile-5 {
-        .slide-back {
-            background: $tile-5-color;
-        }
-        &:hover {
-            outline: $tile-5-color solid 4px;
-        }
-    }
-    .tile-6 {
-        .slide-back {
-            background: $tile-6-color;
-        }
-        &:hover {
-            outline: $tile-6-color solid 4px;
-        }
-    }
-    .tile-7 {
-        .slide-back {
-            background: $tile-7-color;
-        }
-        &:hover {
-            outline: $tile-7-color solid 4px;
-        }
-    }
-    .tile-8 {
-        .slide-back {
-            background: $tile-8-color;
-        }
-        &:hover {
-            outline: $tile-8-color solid 4px;
+        &.active {
+            background-color: white;
+            color: rgba(76,175,80,1);
         }
     }
 }
@@ -78,15 +20,18 @@ $tile-8-color: rgba(191,54,12,0.5);
 // Fit slider images within their containers, no background color
 .slider .slides {
     background-color: transparent;
+    li img {
+        max-width : 100%;
+        max-height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
+// Fit images horizontally
 #DigitalBillboards .slider .slides li img {
-    max-width : 100%;
     background-size: 100% auto;
-    background-repeat: no-repeat;
 }
+// Fit images vertically
 #SocialMediaPosts .slider .slides li img {
-    max-width : 100%;
     background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
