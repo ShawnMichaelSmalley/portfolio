@@ -39,6 +39,18 @@
     }
 }
 
+// Mailers gallery uses branding bar top left and larger
+#Mailers {
+    /deep/ .branding-bar {
+        top: 0;
+        bottom: auto;
+        padding: 0 10px 5px;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-shadow: 0 0 10px black;
+    }
+}
+
 // Fit slider images within their containers, no background color
 .slider .slides {
     background-color: transparent;
