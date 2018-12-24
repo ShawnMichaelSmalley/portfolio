@@ -235,13 +235,13 @@
         <div class="tile-large tile-4 effect-hover-zoom-right modal-trigger"
           data-target="SocialMediaPosts">
           <div class="slide-front">
-            <span class="badge-top">10</span>
+            <span class="badge-top">9</span>
             <img class="responsive-img"
             src="../../assets/media/digital-ads/IG-Social-thumb.jpg">
             <span class="branding-bar">Social Media Posts</span>
           </div>
           <div class="slide-back">
-            <span class="badge-top">10</span>
+            <span class="badge-top">9</span>
             <i class="icon fas fa-search"></i>
             <span class="branding-bar">Social Media Posts</span>
           </div>
@@ -281,6 +281,7 @@
         <div class="slide-front">
           <img class="responsive-img"
           src="../../assets/media/trade-shows/Huntr-Challenge-Coin-thumb.jpg">
+          <span class="branding-bar"><i class="fas fa-star z-depth-5"></i></span>
         </div>
         <div class="slide-back">
           <i class="icon fas fa-search"></i>
@@ -317,11 +318,11 @@
         <div class="slide-front">
           <img class="responsive-img"
           src="../../assets/media/trade-shows/ISC-VR-thumb.jpg">
-          <span class="branding-bar">VR Headset</span>
+          <span class="branding-bar"><i class="fas fa-star"></i> VR Headset</span>
         </div>
         <div class="slide-back">
           <i class="icon fas fa-search"></i>
-          <span class="branding-bar">VR Headset</span>
+          <span class="branding-bar"><i class="fas fa-star"></i> VR Headset</span>
         </div>
       </div>
 
@@ -852,9 +853,6 @@
       <div class="slider" materialize="slider" [materializeParams]="[{indicators: true}]">
         <ul class="slides">
           <li>
-            <img src="../../assets/media/digital-ads/ISC-SpotTheSpark_Facebook.jpg">
-          </li>
-          <li>
             <img src="../../assets/media/digital-ads/IG-Social-Anniversary.jpg">
           </li>
           <li>
@@ -893,8 +891,8 @@
   </div>
 
 <!-- Trade Show Modals -->
-  <div id="IG-Handout" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="IG-Handout" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -902,6 +900,10 @@
             <li class="tab col s6"><a href="#ig-handout-back">Back</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="ig-handout-front" class="col s12">
           <img class="responsive-img" src="../../assets/media/trade-shows/IG-Design-Services-Handout-1.jpg">
         </div>
@@ -923,8 +925,8 @@
     </div>
   </div>
 
-  <div id="Innov8tive-Handout" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="Innov8tive-Handout" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -932,6 +934,10 @@
             <li class="tab col s6"><a href="#innov8tive-handout-back">Back</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="innov8tive-handout-front" class="col s12">
           <img class="responsive-img" src="../../assets/media/trade-shows/ISC-LeaveBehinds-ver3-1.jpg">
         </div>
@@ -953,8 +959,8 @@
     </div>
   </div>
 
-  <div id="Software-Testing" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="Software-Testing" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -962,6 +968,10 @@
             <li class="tab col s6"><a href="#software-testing-back">Back</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="software-testing-front" class="col s12">
           <img class="responsive-img" src="../../assets/media/trade-shows/ISC-LeaveBehinds-AutomatedTesting-1.jpg">
         </div>
@@ -983,8 +993,8 @@
     </div>
   </div>
 
-  <div id="Huntr-Handout" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="Huntr-Handout" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -992,6 +1002,10 @@
             <li class="tab col s6"><a href="#huntr-handout-back">Back</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="huntr-handout-front" class="col s12">
           <img class="responsive-img" src="../../assets/media/trade-shows/Huntr-Marketing-Slick-FullBleed-1.jpg">
         </div>
@@ -1032,8 +1046,45 @@
   </div>
 
   <div id="Huntr-Challenge-Coin" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
-      Challenge Coin Contents Here
+    <div class="modal-content">
+      <h3>Huntr Challenge Coin</h3>
+      <p align="justify">
+        This was a project to take the concept of a "challenge coin" - popular in military culture
+        as tokens of achievements - and have some manufactured to hand out at an information security
+        conference. Many of the Huntr InfoSec team are or were at one time members of the armed forces
+        and would be evangelists for our threat detection platforms at the trade shows.
+      </p>
+      <img class="responsive-img" src="../../assets/media/trade-shows/Huntr-GuidedHunt-Coin-Colored.png">
+      <p align="justify">
+        The design began digitally with a graphic meant to incorporate the three tenants of "guided
+        hunting" (monitoring your network and isolating threats):
+      </p>
+      <p align="justify">
+        <strong>PERCEPTION</strong> - Huntr allows users to gain insight into their network through a wide array of
+        simple and intuitive tools. Perception can come from many sources; file introspection,
+        triaging raw network logs, or combing through endpoint activity. Huntr provides a platform
+        in which analysts can move freely from one data source to the next, and constantly improve
+        their perceptions of all areas of their network.
+      </p>
+      <p align="justify">
+        <strong>KNOWLEDGE</strong> - Huntr equips an analyst with the tools necessary to continuously build
+        understanding of adversaries or malicious intent from their perceptions. The culmination
+        of knowledge in an environment is paramount to efficient and effective hunting operations.
+      </p>
+      <p align="justify">
+        <strong>ACTION</strong> - Once knowledge has been accrued, action can take place. Huntr provides mechanisms
+        for live detections of network data, file triggering via signatures, or offloading a payload
+        to the users endpoint of choice.
+      </p>
+      <p align="justify">
+        The pyramid's three sides represent the three tenants while the eye with the crosshair
+        represents guided hunting as a whole. Once a digital design was approved it was taken to a
+        manufacturer to press and enamel the finished product.
+      </p>
+      <p align="justify">
+        You can learn more about Huntr at <a href="http://www.huntr.com" target="_blank">www.Huntr.com</a>
+      </p>
+      <img class="responsive-img" src="../../assets/media/trade-shows/Huntr-GuidedHunt-Coin-Photo.jpg">
     </div>
     <div class="modal-footer">
       <a class="modal-action waves-effect waves-green btn" target="_blank"
@@ -1049,8 +1100,44 @@
   </div>
 
   <div id="VR-Headset" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
-      VR Contents Here
+    <div class="modal-content">
+      <h3>Custom Branded Google Cardboard VR Headset</h3>
+      <p align="justify">
+        We wanted something to give out at events or leave with clients that would be useful and
+        fun enough that they'd be more likely to keep it around and show off to others. With VR
+        just beginning to get popular we setup a portion of our booths to showcase some nicer
+        Samsung VR headsets to show eventgoers what VR was all about. When they were done we'd
+        encourage them to download a free app on the Apple or Android app store and take one of
+        our free Google Cardboard compatible headsets. This quickly became a handout that people
+        would ask about at later events so proved to be memorable and make a lasting impression.
+      </p>
+      <img class="responsive-img" src="../../assets/media/trade-shows/ISC-VR-P2-Template.jpg">
+      <p align="justify">
+        The design itself was taken from the ad campaigns we had been running in trade media at
+        the time to match our other branding. We had a company DodoCase send us design templates
+        for their "P2" model and got to work. When we ordered about 100 headsets the cost ended
+        at about $15 each, but since most of our trade shows were for brand-to-brand marketing
+        it worked out that our select audience was worth it (including keeping some for ourselves
+        and making sure our favorite clients got a few, too).
+      </p>
+      <div class="row">
+        <div class="col m6 s12">
+          <img materialize="materialbox" class="responsive-img materialboxed"
+            src="../../assets/media/trade-shows/ISC-VR-front.jpg">
+        </div>
+        <div class="col m6 s12">
+          <img materialize="materialbox" class="responsive-img materialboxed"
+            src="../../assets/media/trade-shows/ISC-VR-angle.jpg">
+        </div>
+        <div class="col m6 s12">
+          <img materialize="materialbox" class="responsive-img materialboxed"
+            src="../../assets/media/trade-shows/ISC-VR-back.jpg">
+        </div>
+        <div class="col m6 s12">
+          <img materialize="materialbox" class="responsive-img materialboxed"
+            src="../../assets/media/trade-shows/ISC-VR-full.jpg">
+        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <a class="modal-action waves-effect waves-green btn" target="_blank"
@@ -1065,8 +1152,8 @@
     </div>
   </div>
 
-  <div id="IG-Posters" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="IG-Posters" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -1076,6 +1163,10 @@
             <li class="tab col s3"><a href="#ig-posters-4">Kitchen 3</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="ig-posters-1" class="col s12">
           <img class="responsive-img" src="../../assets/media/trade-shows/IG-Harder-House-Poster.jpg">
         </div>
@@ -1103,8 +1194,8 @@
     </div>
   </div>
 
-  <div id="Mason-Posters" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="Mason-Posters" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -1114,6 +1205,10 @@
             <li class="tab col s3"><a href="#mason-posters-4">Game Shop</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="mason-posters-1" class="col s12">
           <img class="responsive-img" src="../../assets/media/trade-shows/Mason-Lauren-Warkentine-Poster.jpg">
         </div>
@@ -1141,8 +1236,8 @@
     </div>
   </div>
 
-  <div id="IG-TV-Slides" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="IG-TV-Slides" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -1152,6 +1247,10 @@
             <li class="tab col s3"><a href="#ig-tv-slides-4">Slides 31-39</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="ig-tv-slides-1" class="col s12">
           <div class="slider" materialize="slider" [materializeParams]="[{indicators: true}]">
             <ul class="slides">
@@ -1303,8 +1402,8 @@
     </div>
   </div>
 
-  <div id="Mason-TV-Slides" class="modal modal-fixed-footer" materialize="modal">
-    <div class="modal-content center-align">
+  <div id="Mason-TV-Slides" class="modal modal-fixed-header modal-fixed-footer" materialize="modal">
+    <div class="modal-header">
       <div class="row">
         <div class="col s12">
           <ul class="tabs" materialize="tabs">
@@ -1312,6 +1411,10 @@
             <li class="tab col s6"><a href="#mason-tv-slides-2">Slides 9-16</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="modal-content center-align">
+      <div class="row">
         <div id="mason-tv-slides-1" class="col s12">
           <div class="slider" materialize="slider" [materializeParams]="[{indicators: true}]">
             <ul class="slides">
