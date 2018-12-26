@@ -7,7 +7,7 @@ import { Component, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portfolio';
-  heading = { name: 'My Portfolio' };
+  heading = { name: 'Shawn Smalley' };
   menuItems: MenuItem[];
 
   constructor() {

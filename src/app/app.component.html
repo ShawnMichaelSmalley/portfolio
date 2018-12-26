@@ -1,21 +1,21 @@
-<nav class="white">
+<nav class="green lighten-5">
   <div class="nav-wrapper">
-    <a *ngIf="heading" href="#" class="page-title black-text">{{heading.name | uppercase}}</a>
+    <a *ngIf="heading" href="#" class="page-title green-text">{{heading.name | uppercase}}</a>
 
     <a materialize="sideNav" [materializeParams]="sidenavParams" [materializeActions]="sidenavActions"
     data-activates="nav-mobile" class="button-collapse hide-on-large-only">
-      <i class="material-icons grey-text">menu</i>
+      <i class="material-icons green-text">menu</i>
     </a>
 
     <ul class="right hide-on-med-and-down">
-      <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="black-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
+      <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
     </ul>
 
     <ul id="nav-mobile" class="side-nav">
       <li>
         <a ><i class="material-icons" (click)="close()">close</i></a>
       </li>
-      <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="black-text" [routerLink]="menuItem.route" (click)="close()">{{ menuItem.name | uppercase }}</a></li>
+      <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route" (click)="close()">{{ menuItem.name | uppercase }}</a></li>
       <div class="divider">
 
       </div>
@@ -23,7 +23,7 @@
   </div>
 </nav>
 <div class="section">
-  <div class="container white">
-    <router-outlet></router-outlet>
+  <div class="container">
+      <router-outlet></router-outlet>
   </div>
 </div>

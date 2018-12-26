@@ -3,3 +3,12 @@
 // Windows Metro style tiles interface and color schemes
 @import "./scss/tiles.scss";
 @import "./scss/tiles-colors.scss";
+
+body {
+    background-color: #c8e6c9;
+    background-image: url(../src/assets/background.png);
+    background-position: right bottom;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
