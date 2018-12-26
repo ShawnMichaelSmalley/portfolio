@@ -10,3 +10,10 @@
     line-height: 1em;
     text-rendering: optimizeLegibility;
   }
+
+  // Soft green color scheme for tabs
+.tabs {
+  /deep/ & .indicator {
+      background-color: rgba(76,175,80,1);
+  }
+}
