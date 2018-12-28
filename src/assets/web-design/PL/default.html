@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>nautixlabs</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1,min-scale=1,max-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.min.css">
+    <link rel="stylesheet" href="styles/pushy.min.css">
+    <link rel="stylesheet" href="styles/nautix.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+    <script src="//cdn.rawgit.com/jasny/bootstrap/master/js/offcanvas.js"></script>
+</head>
+<body>
+    <!-- Hidden search panel - slides out from right when triggered -->
+    <nav class="pushy pushy-right sidebar">
+        DYNAMIC RIGHT SEARCH PANEL
+    </nav>
+    <!-- Overlay used to shadow content when search is active, collapses search when clicked -->
+    <div class="site-overlay"></div>
+    <!-- All content placed in container so that off-canvas menus can slide when triggered -->
+    <div id="container">
+        <!-- Off-canvas right navigation column for mobile view -->
+        <div class="navmenu navmenu-default navmenu-fixed-left offcanvas sidebar" role="navigation">
+            <h3>Pages</h3>
+            <ul class="nav navmenu-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Shipping &amp; Returns</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <h3>Browse by Category</h3>
+            <ul class="nav navmenu-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Category 1
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu navmenu-nav" role="menu">
+                        <li><a href="#">Sub-Category 1-1</a></li>
+                        <li><a href="#">Sub-Category 1-2</a></li>
+                        <li><a href="#">Sub-Category 1-3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Category 2
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu navmenu-nav" role="menu">
+                        <li><a href="#">Sub-Category 2-1</a></li>
+                        <li><a href="#">Sub-Category 2-2</a></li>
+                        <li><a href="#">Sub-Category 2-3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Category 3
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu navmenu-nav" role="menu">
+                        <li><a href="#">Sub-Category 3-1</a></li>
+                        <li><a href="#">Sub-Category 3-2</a></li>
+                        <li><a href="#">Sub-Category 3-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Category 4</a></li>
+            </ul>
+        </div>
+        <!-- Fixed top navbar for all views -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <!-- Top row of account, call, and quote buttons -->
+            <div class="container-fluid" id="top-buttons">
+                <div class="row text-right">
+                    <!-- Mobile nav toggle appears here instead of using typical nav collapse -->
+                    <button type="button" class="navbar-toggle pull-left visible-xs" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+                        <span class="glyphicon glyphicon-th-large"></span>
+                    </button>
+                    <div class="btn-group">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-chevron-down hidden-xs"></span>
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span class="hidden-xs">MY ACCOUNT</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                Dropdown contents here
+                            </ul>
+                        </div>
+                        <!-- Search button appears here when other menu becomes too small -->
+                        <button type="button" class="btn btn-secondary menu-btn visible-xs">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        <button type="button" class="btn btn-secondary" href="tel:8888846449">
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            <span class="hidden-xs">888-884-6449</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="Quote-Button">
+                        GET A QUOTE
+                    </button>
+                </div>
+            </div>
+            <!-- Primary navbar for desktop, becomes logo header on mobile -->
+            <div class="container-fluid" id="top-desktop-nav">
+                <div class="row">
+                    <div class="navbar-brand">
+                        <a href="#"><img src="images/logo.png"></a>
+                    </div>
+                    <div class="pull-right hidden-xs">
+                        <ul class="nav navbar-nav" role="menu">
+                            <li><a href="#">About</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category 1</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Sub-Category 1-1</a></li>
+                                            <li><a href="#">Sub-Category 1-2</a></li>
+                                            <li><a href="#">Sub-Category 1-3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category 2</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Sub-Category 2-1</a></li>
+                                            <li><a href="#">Sub-Category 2-2</a></li>
+                                            <li><a href="#">Sub-Category 2-3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category 3</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Sub-Category 3-1</a></li>
+                                            <li><a href="#">Sub-Category 3-2</a></li>
+                                            <li><a href="#">Sub-Category 3-3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Category 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Shipping &amp; Returns</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li>
+                                <a class="menu-btn">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main content container -->
+        <div class="container-fluid" id="top">
+            <!-- Top row for breadcrumbs -->
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Products</li>
+                </ol>
+            </div>
+            <div class="row">
+                <!-- Right column for navigating products or account -->
+                <div class="col-sm-3 hidden-xs" id="Right-Body-Nav">
+                    <div id="Column-Heading">
+                        <h3>Products</h3>
+                    </div>
+                    <ul class="nav navmenu-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Category 1
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                <li><a href="#">Sub-Category 1-1</a></li>
+                                <li><a href="#">Sub-Category 1-2</a></li>
+                                <li><a href="#">Sub-Category 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Category 2
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                <li><a href="#">Sub-Category 2-1</a></li>
+                                <li><a href="#">Sub-Category 2-2</a></li>
+                                <li><a href="#">Sub-Category 2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Category 3
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                <li><a href="#">Sub-Category 3-1</a></li>
+                                <li><a href="#">Sub-Category 3-2</a></li>
+                                <li><a href="#">Sub-Category 3-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Category 4</a></li>
+                    </ul>
+                </div>
+                <!-- Main content column -->
+                <div class="col-sm-9">
+                    <!-- Top tabs for navigating categories or topics -->
+                    <div class="row tabcordion" id="Top-Tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a data-target=".Categories">Categories</a>
+                            </li>
+                            <li>
+                                <a data-target=".Featured">Featured</a>
+                            </li>
+                            <li>
+                                <a data-target=".NewArrivals">New Arrivals</a>
+                            </li>
+                            <li>
+                                <a data-target=".OnSale">On Sale</a>
+                            </li>
+                        </ul>
+                        <!-- When top tabs are clicked the content below is cycled -->
+                        <div class="tab-content">
+                            <div class="Categories active in">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a erat lectus. Ut eu nulla vitae enim volutpat lobortis eget vel augue. Duis id consequat mauris, eu ultrices metus. Suspendisse egestas, erat gravida pulvinar mollis, purus ex pretium lorem, sit amet gravida erat justo ut lacus. Pellentesque porttitor interdum massa, vitae pretium enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean elementum odio et quam accumsan fermentum. Donec sed sem condimentum, egestas dolor vitae, porta augue. Morbi vehicula tempus ipsum non accumsan. Proin ullamcorper, mi nec faucibus auctor, est nulla lobortis lectus, volutpat mattis lacus ante id sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sagittis odio ut augue suscipit consectetur.</p>
+                                <p>Aliquam id venenatis dolor, et malesuada tortor. Vivamus eget tristique tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in suscipit orci. Donec tristique viverra pellentesque. Maecenas ac justo non sapien malesuada tincidunt. Suspendisse sed lorem eget est consectetur imperdiet. Etiam quis placerat turpis. Nam et velit eu augue commodo vehicula. Cras rutrum nulla dapibus hendrerit volutpat.</p>
+                            </div>
+                            <div class="Featured">
+                                <p>Donec vitae nisi congue, dapibus tortor at, maximus urna. Morbi cursus ultrices dui, nec congue ante faucibus aliquam. Sed vitae risus auctor, convallis felis consequat, aliquam metus. Nullam ut ligula id ligula imperdiet dapibus in ut tellus. Cras tempus at mi eget ullamcorper. Sed iaculis ut nisl a consequat. Maecenas euismod vel justo non euismod. Donec sed condimentum magna. Aenean placerat accumsan lorem, a placerat est condimentum hendrerit. Praesent massa lacus, rutrum at consequat in, imperdiet quis augue. Proin maximus fringilla quam, ac dapibus nibh vulputate tempus. Maecenas dignissim consectetur sapien in lacinia. Nunc vehicula suscipit velit, vel tincidunt ligula tempor eleifend. Quisque hendrerit sed mi sit amet luctus. Aliquam vestibulum aliquam justo, in volutpat lacus consequat vitae. Praesent tincidunt rutrum nunc at pulvinar.</p>
+                                <p>Nulla mollis sapien tellus, eu elementum enim iaculis ornare. Ut porta odio orci, sed facilisis mauris fringilla nec. Quisque volutpat arcu id sapien rutrum consectetur. Nulla erat diam, rutrum nec tincidunt et, ullamcorper tincidunt mauris. Phasellus et tempus lorem, vitae gravida elit. Nunc tincidunt vitae tellus id tincidunt. Suspendisse a elit velit.</p>
+                            </div>
+                            <div class="NewArrivals">
+                                <p>Proin pharetra vestibulum rhoncus. Nulla neque ligula, ullamcorper scelerisque velit a, gravida congue elit. Cras dignissim magna a diam auctor, et aliquet augue ornare. Fusce volutpat consequat imperdiet. Cras eu sem varius, egestas augue vel, auctor massa. Pellentesque cursus molestie dapibus. Fusce porttitor blandit semper. Nullam placerat eget justo efficitur mattis.</p>
+                                <p>Suspendisse vitae venenatis diam. Aliquam erat volutpat. Donec nec posuere ipsum, convallis consectetur nunc. Aliquam erat volutpat. Phasellus id dui metus. Aenean ac magna sem. Duis feugiat libero non mi rhoncus, non suscipit lectus facilisis. Nulla tincidunt purus non mauris placerat fermentum. Nunc non porttitor nisi, ut elementum erat. Mauris tempor est id condimentum aliquet. Vivamus in dolor at risus aliquet mollis. Etiam a varius ligula, vitae placerat est.</p>
+                            </div>
+                            <div class="OnSale">
+                                <p>Vivamus augue ante, porta et dui pulvinar, laoreet aliquam ipsum. Vivamus tempus quam non neque vehicula auctor ultrices at augue. Ut blandit finibus dolor, a maximus ligula molestie nec. Nunc nisl tellus, ullamcorper eu massa vitae, sodales placerat elit. Mauris viverra, nibh non dapibus lobortis, est nisl consectetur nulla, vel accumsan arcu orci in nulla. Sed aliquet condimentum suscipit. Ut pellentesque, leo at tempor tincidunt, diam nulla accumsan risus, vel viverra felis tortor sit amet tortor. Quisque ornare venenatis tortor vel aliquam. Duis ut neque ex. Mauris sit amet felis ut justo laoreet finibus at quis urna. Vivamus nec cursus massa. Duis quis aliquam sapien.</p>
+                                <p>Nulla condimentum ac risus vel commodo. Morbi lacinia mauris vel nibh elementum accumsan. Vestibulum vel enim nec velit bibendum efficitur. Ut tempus urna in fermentum aliquet. Nunc velit felis, sollicitudin sit amet interdum sit amet, consectetur quis quam. Aenean sed tempor risus. Integer vel ligula ut leo sagittis mollis nec quis justo. Cras laoreet non massa sed gravida. Curabitur non ex a mauris bibendum porta sed eu quam. Donec tempor nisl id eros porttitor viverra. Phasellus consectetur lacus ipsum, et vulputate est gravida id.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="Feature-Bar">
+                <div class="col-xs-12">
+                    <h3 id="Section-Heading">
+                        <span>Section Heading</span>
+                    </h3>
+                </div>
+                <ul class="Product-List">
+                    <li>
+                        <div class="Product-Image-Quick-View">
+                            <a href="#">
+                                <img src="images/ProductDefault.gif">
+                            </a>
+                        </div>
+                        <div class="Product-Details">
+                            <strong>
+                                <a href="#">
+                                    PRODUCT TITLE HERE
+                                </a>
+                            </strong>
+                        </div>
+                        <div class="Product-Price-Rating">
+                            <span class="Product-Price">
+                                LOGIN FOR PRICE
+                            </span>
+                            <div class="Product-Rating">
+                                <img src="images/IcoRating0.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Product-Image-Quick-View">
+                            <a href="#">
+                                <img src="images/ProductDefault.gif">
+                            </a>
+                        </div>
+                        <div class="Product-Details">
+                            <strong>
+                                <a href="#">
+                                    PRODUCT TITLE HERE
+                                </a>
+                            </strong>
+                        </div>
+                        <div class="Product-Price-Rating">
+                            <span class="Product-Price">
+                                LOGIN FOR PRICE
+                            </span>
+                            <div class="Product-Rating">
+                                <img src="images/IcoRating0.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Product-Image-Quick-View">
+                            <a href="#">
+                                <img src="images/ProductDefault.gif">
+                            </a>
+                        </div>
+                        <div class="Product-Details">
+                            <strong>
+                                <a href="#">
+                                    PRODUCT TITLE HERE
+                                </a>
+                            </strong>
+                        </div>
+                        <div class="Product-Price-Rating">
+                            <span class="Product-Price">
+                                LOGIN FOR PRICE
+                            </span>
+                            <div class="Product-Rating">
+                                <img src="images/IcoRating0.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Product-Image-Quick-View">
+                            <a href="#">
+                                <img src="images/ProductDefault.gif">
+                            </a>
+                        </div>
+                        <div class="Product-Details">
+                            <strong>
+                                <a href="#">
+                                    PRODUCT TITLE HERE
+                                </a>
+                            </strong>
+                        </div>
+                        <div class="Product-Price-Rating">
+                            <span class="Product-Price">
+                                LOGIN FOR PRICE
+                            </span>
+                            <div class="Product-Rating">
+                                <img src="images/IcoRating0.png">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Newsletter signup row -->
+        <div class="container-fluid" id="Footer-Newsletter-Signup">
+            <div class="row">
+                <div class="col-sm-6 text-center" id="Newsletter-Intro">
+                    Join our VIP list to stay in the loop on hot new products and promotions!
+                </div>
+                <div class="col-sm-6 text-center">
+                    <input type="text" lang="en" class="Textbox" id="Newsletter-FirstName" name="Newsletter-FirstName" placeholder="first name">
+                    <input type="text" lang="en" class="Textbox" id="Newsletter-Email" name="Newsletter-Email" placeholder="email address">
+                    <button type="submit" class="btn btn-primary" id="Newsletter-Submit" aria-hidden="true" aria-label="Submit">
+                        <span class="glyphicon glyphicon-chevron-right hidden-xs"></span>
+                        <span class="visible-xs">SIGN UP</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Main site footer -->
+        <div class="container-fluid" id="Container-Footer">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div id="Column-Heading">
+                        <h3>My Account</h3>
+                    </div>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div id="Column-Heading">
+                        <h3>Information</h3>
+                    </div>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Shipping &amp; Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div id="Column-Heading">
+                        <h3>Shop</h3>
+                    </div>
+                    <ul class="nav navmenu-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Category 1
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                <li><a href="#">Sub-Category 1-1</a></li>
+                                <li><a href="#">Sub-Category 1-2</a></li>
+                                <li><a href="#">Sub-Category 1-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Category 2
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                <li><a href="#">Sub-Category 2-1</a></li>
+                                <li><a href="#">Sub-Category 2-2</a></li>
+                                <li><a href="#">Sub-Category 2-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Category 3
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                <li><a href="#">Sub-Category 3-1</a></li>
+                                <li><a href="#">Sub-Category 3-2</a></li>
+                                <li><a href="#">Sub-Category 3-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Category 4</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div id="Column-Heading">
+                        <h3>Latest Updates</h3>
+                    </div>
+                    <div class="blog-update">
+                        <span class="blog-quote">
+                            <a href="#">
+                                TITLE OF LATEST BLOG POST
+                            </a>
+                        </span><br>
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        JAN 01 2016
+                        <a class="blog-link pull-right" href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 text-center" id="Back-To-Top">
+                    <a href="#top">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="row text-center" id="Footer-Copyright">
+                <small>
+                    Copyright 2016 nautixlabs. All Rights Reserved. All prices are in USD.
+                    <a href="#">Sitemap</a>
+                </small>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/pushy.min.js"></script>
+    <script src="scripts/tabcordion.min.js"></script>
+    <script>
+        $(function() {
+            $('.tabcordion').tabcordion()
+        });
+    </script>
+</body>
+</html>

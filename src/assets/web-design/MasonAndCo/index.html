@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MASON &amp; CO. - Construction and Remodeling</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Specializing in custom homes, remodeling, kitchen and bath renovations, and general construction services">
+    <meta name="author" content="Innov8tive">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/lightcase.css">
+    <style>
+        /* Custom font */
+        html {
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Navigation Styles */
+        nav {
+            z-index: 9999;
+        }
+        a.active {
+            background-color: rgba(0,0,0,0.2);
+        }
+        .brand-logo {
+            text-transform: uppercase;
+            margin-left: 1em;
+        }
+
+        /* Color pallete changes */
+        [type="radio"]:checked+label:after,
+        [type="radio"].with-gap:checked+label:after,
+        .picker__date-display,
+        .picker__day--selected,
+        .picker__day--selected:hover,
+        .picker--focused,
+        .picker__day--selected {
+            background-color: #039be5;
+        }
+        .picker__nav--prev:hover,
+        .picker__nav--next:hover {
+            background: #b3e5fc;
+        }
+        .picker__close,
+        .dropdown-content li>a,
+        .dropdown-content li>span,
+        .input-field input[type=text]:not(.browser-default):focus:not([readonly])+label,
+        .input-field input[type=email]:not(.browser-default):focus:not([readonly])+label,
+        textarea.materialize-textarea:focus:not([readonly])+label {
+            color: #039be5;
+        }
+        [type="radio"]:checked+label:after,
+        [type="radio"].with-gap:checked+label:before,
+        [type="radio"].with-gap:checked+label:after {
+            border: 2px solid #039be5;
+        }
+        [type="checkbox"]:checked+label:before {
+            border-right: 2px solid #039be5;
+            border-bottom: 2px solid #039be5;
+        }
+        .input-field input[type=text]:not(.browser-default):focus:not([readonly]),
+        .input-field input[type=email]:not(.browser-default):focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #039be5;
+            box-shadow: 0 1px 0 0 #039be5;
+        }
+        
+        /* Carousel Area */
+        .carousel {
+            min-height: 70vh;
+        }
+        .carousel-item {
+            background-size: cover;
+            background-position: center center;
+        }
+        .carousel-logo {
+            height: 50vh;
+            opacity: 0.5;
+        }
+
+        /* Carousel Slides - Medium screens an down */
+        @media only screen and (min-width : 992px) {
+            #slide-1 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(img/01-sm.jpg);
+            }
+            #slide-2 {
+                background-image:
+                    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                    url(img/02-sm.jpg);
+            }
+            #slide-3 {
+                background-image:
+                    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                    url(img/03-sm.jpg);
+            }
+            #slide-4 {
+                background-image:
+                    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                    url(img/04-sm.jpg);
+            }
+        }
+
+        /* Carousel Slides - Medium screens and up */
+        @media only screen and (max-width : 992px) {
+            #slide-1 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(img/01.jpg);
+            }
+            #slide-2 {
+                background-image:
+                    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                    url(img/02.jpg);
+            }
+            #slide-3 {
+                background-image:
+                    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                    url(img/03.jpg);
+            }
+            #slide-4 {
+                background-image:
+                    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                    url(img/04.jpg);
+            }
+        }
+    </style>
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-70002926-5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-70002926-5');
+</script>
+<body>
+    <section id="intro">
+        <div class="carousel carousel-slider center" data-indicators="true">
+            <div class="carousel-fixed-item center">
+                <img class="carousel-logo" src="img/Mason_Co_Logo.svg">
+                <p>
+                    <a class="btn waves-effect grey" href="#Contact" target="_blank">
+                        Request a Quote
+                    </a>
+                </p>
+            </div>
+            <div class="carousel-item" href="#one!" id="slide-1"></div>
+            <div class="carousel-item" href="#two!" id="slide-2"></div>
+            <div class="carousel-item" href="#three!" id="slide-3"></div>
+            <div class="carousel-item" href="#four!" id="slide-4"></div>
+        </div>
+    </section>
+    <nav id="content">
+        <div class="nav-wrapper grey darken-1">
+            <a class="brand-logo hide-on-med-and-down">Mason &amp; Co.</a>
+            <ul id="nav-mobile" class="right">
+
+                <li>
+                    <a href="#Overview">
+                        <i class="fa fa-2x fa-info-circle"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Photos">
+                        <i class="fa fa-2x fa-camera"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Contact">
+                        <i class="fa fa-2x fa-question-circle"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="//www.facebook.com/Mason-and-Co-116020862428048/" target="_blank">
+                        <i class="fab fa-2x fa-facebook-f"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="//www.instagram.com/masonandcompanyllc/" target="_blank">
+                        <i class="fab fa-2x fa-instagram"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <section id="Overview" class="scrollspy">
+        <div class="row">
+            <div class="col s10 offset-s1">
+
+                <h5>Specializing in custom homes, remodeling, kitchen and bath renovations, and general construction services</h5>
+
+                <p align="justify">Mason &amp; Co. is a premier construction services company that has a combined experience of over 30 years. We specialize in custom homes, remodeling, kitchen and bath renovations, as well as general construction. Whether you plan to transform your kitchen, convert your bathroom into a spa, or add an additional room, Mason and Co. can help you realize your new vision for your home.</p>
+
+                <p align="justify">Our services are backed by skilled individuals who have vast experience in all areas of their work, and proudly put quality at the forefront of our company. We take the time to construct all projects to perfection and pay particular attention to the details that are important to our customers. This is why the majority of our business is comprised of direct referrals from loyal and satisfied customers.</p>
+                    
+                <p align="justify">We also have the ability to work directly with our sister company Interior Gilt, an interior design firm, which enables our customers to have a one-stop shop for all their home renovation needs.</p>
+                
+                <p align="justify">Remodeling your home has never been easier. We have the knowledge and experience to bring your vision to life in a timely and economical manner. No job is too big or too small.</p>
+                    
+                <p align="justify">Call Mason and Co. today for a free on-site estimate. We will evaluate your home as it is and listen to your plans. We will give you practical tips in regards to their feasibility, and then prepare a cost estimate for you so you can get started with your project.</p>
+
+                <div class="row">
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/general.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    General Construction
+                                    <i class="fa fa-xs fa-ellipsis-v right"></i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    General Construction
+                                    <i class="fa fa-times right"></i>
+                                </span>
+                                <p>We have the best general contractor services in Oklahoma City! So, whether you are looking to have upgrades, remodel your home, or if you are a local business needing some extra hands, we are there to help you get the job done!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/carpentry.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    Carpentry
+                                    <i class="fa fa-xs fa-ellipsis-v right"></i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    Carpentry
+                                    <i class="fa fa-times right"></i>
+                                </span>
+                                <p>As the old saying goes, “owning a hammer doesn’t make you a carpenter.” If you’re looking for local carpentry services you can trust, Mason and Co. is your go-to source to get the job done right. Homeowners count on us when they need a trusted handyman for their home carpentry projects. We specialize in a number of framing, trim, and finish carpentry services. Our work is performed by an experienced carpenter who will walk you through every step of the process for a simple and seamless experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/paint.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    Paint
+                                    <i class="fa fa-xs fa-ellipsis-v right"></i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    Paint
+                                    <i class="fa fa-times right"></i>
+                                </span>
+                                <p>One of the most effective and affordable ways to personalize your home or office is by adding fresh color. Whether bright, mutes, cheerful, or elegant – a coat of paint can make a world of difference! If you are looking to improve the curb appeal of your home, or simply enhance a room or office space, you can count on our painting experts for premier services and pristine results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/drywall.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    Drywall
+                                    <i class="fa fa-xs fa-ellipsis-v right"></i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    Drywall
+                                    <i class="fa fa-times right"></i>
+                                </span>
+                                <p>We offer a broad scope of drywall services, which include drywall installation, drywall repair, and painting services. We service both residential and commercial buildings, and can perform out expert drywall on both interior and exterior walls. When you’re in need of drywall services in Oklahoma City who are not only knowledgeable but experienced and personal as well, no one comes close to the service provided by our drywall experts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/flooring.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    Flooring
+                                    <i class="fa fa-xs fa-ellipsis-v right"></i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    Flooring
+                                    <i class="fa fa-times right"></i>
+                                </span>
+                                <p>Carpet, tiles, laminate, or wood flooring – the choices for your home are nearly limitless. Mason and Co. will expertly install any floor covering solution you choose for your home. We offer all types of installation services ranging from solid, engineered, or laminated hardwood to stone, marble, granite or travertine tile floors. Let us get started with a new plan with you for your floor!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/tile.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    Tile &amp; Stone
+                                    <i class="fa fa-xs fa-ellipsis-v right"></i>
+                                </span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    Tile &amp; Stone
+                                    <i class="fa fa-times right"></i>
+                                </span>
+                                <p>We employ only the finest tile and stone installers and craftsman. With years of experience, they successfully combine modern applications with old world craftsmanship to make every job truly unique and customized just for your space. Whether it be installing a backsplash in your kitchen, or creating the shower of your dreams we have you covered.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Photos" class="scrollspy grey lighten-3">
+        <div class="divider"></div>
+        <div class="row">
+            <h5 align="center">Featured Projects</h5>
+        </div>
+        <div class="row">
+            <div class="col l8 offset-l2 m10 offset-m1">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <span class="card-title" align="center">
+                            An In-Depth Look: Kitchen Ground-Up Remodel
+                        </span>
+                        <div class="row">
+
+                            <div class="col m6 s12">
+                                <div class="card hoverable">
+                                    <a class="grey-text text-darken-3" href="img/Kitchen-Before/DSC00119.jpg" data-rel="lightcase:Kitchen-Before" title="Complete kitchen remodel for client in Oklahoma city ">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <img src="img/kitchen-before_thumb.jpg">
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title">
+                                                Before and During Construction
+                                                <i class="fa fa-xs fa-camera right"></i>
+                                            </span>
+                                            <p>A complete tear down to the studs, beams, and floorboards including the surrounding rooms for additional in-progress remodeling</p>
+                                            <p align="right">(19 pics)</p>
+                                        </div>
+                                    </a>
+                                    <a href="img/Kitchen-Before/DSC00125.jpg" data-rel="lightcase:Kitchen-Before" title="Demolition of entry way leading into kitchen "></a>
+                                    <a href="img/Kitchen-Before/DSC00126.jpg" data-rel="lightcase:Kitchen-Before" title="Dining room area before remodel work"></a>
+                                    <a href="img/Kitchen-Before/DSC00127.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of kitchen remodel during demolition"></a>
+                                    <a href="img/Kitchen-Before/DSC00130.jpg" data-rel="lightcase:Kitchen-Before" title="View of dining room from living room during remodel"></a>
+                                    <a href="img/Kitchen-Before/DSC00133.jpg" data-rel="lightcase:Kitchen-Before" title="Removing base boards in dining room durring remodel"></a>
+                                    <a href="img/Kitchen-Before/DSC00135.jpg" data-rel="lightcase:Kitchen-Before" title="Entry way leading to kitchen during remodel demolition"></a>
+                                    <a href="img/Kitchen-Before/DSC00266.jpg" data-rel="lightcase:Kitchen-Before" title="Dining room in progress during remodel"></a>
+                                    <a href="img/Kitchen-Before/DSC00268.jpg" data-rel="lightcase:Kitchen-Before" title="Dining room drywall and flooring being remodeled"></a>
+                                    <a href="img/Kitchen-Before/DSC00270.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of dining room being remodeled"></a>
+                                    <a href="img/Kitchen-Before/DSC00275.jpg" data-rel="lightcase:Kitchen-Before" title="Entry way to kitchen being remodeled"></a>
+                                    <a href="img/Kitchen-Before/DSC00276.jpg" data-rel="lightcase:Kitchen-Before" title="Replacing floor in living room"></a>
+                                    <a href="img/Kitchen-Before/DSC00277.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of living room floor replacement and remodel"></a>
+                                    <a href="img/Kitchen-Before/DSC00279.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of living room remodel and floor"></a>
+                                    <a href="img/Kitchen-Before/DSC00280.jpg" data-rel="lightcase:Kitchen-Before" title="Replacing floor and drywall in living room"></a>
+                                    <a href="img/Kitchen-Before/DSC00281.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of hallway remodel"></a>
+                                    <a href="img/Kitchen-Before/DSC00282.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of living room"></a>
+                                    <a href="img/Kitchen-Before/DSC00284.jpg" data-rel="lightcase:Kitchen-Before" title="Before photo of living room remodel"></a>
+                                    <a href="img/Kitchen-Before/DSC00287.jpg" data-rel="lightcase:Kitchen-Before" title="Photo of living room remodel work"></a>
+                                </div>
+                            </div>
+
+                            <div class="col m6 s12">
+                                <div class="card hoverable">
+                                    <a class="grey-text text-darken-3" href="img/Kitchen-After/CL5A6619.jpg" data-rel="lightcase:Kitchen-After" title="Kitchen Remodel in Oklahoma City">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <img src="img/kitchen-after_thumb.jpg">
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title">
+                                                After Photos
+                                                <i class="fa fa-xs fa-camera right"></i>
+                                            </span>
+                                            <p>Refinished wood floor, marble counters, unique painted  cabinetry, wall paneling, and appliances and furniture complete the look</p>
+                                            <p align="right">(25 pics)</p>
+                                        </div>
+                                    </a>
+                                    <a href="img/Kitchen-After/CL5A6620.jpg" data-rel="lightcase:Kitchen-After" title="Sink and backsplash work for kitchen remodel in Oklahoma City"></a>
+                                    <a href="img/Kitchen-After/CL5A6621.jpg" data-rel="lightcase:Kitchen-After" title="Cabinet carpentry work for kitchen remodel"></a>
+                                    <a href="img/Kitchen-After/CL5A6622.jpg" data-rel="lightcase:Kitchen-After" title="Countertop and backsplash in kitchen"></a>
+                                    <a href="img/Kitchen-After/CL5A6623.jpg" data-rel="lightcase:Kitchen-After" title="Cabiet and floor work in kitchen"></a>
+                                    <a href="img/Kitchen-After/CL5A6624.jpg" data-rel="lightcase:Kitchen-After" title="Finished dining room after remodel "></a>
+                                    <a href="img/Kitchen-After/CL5A6625.jpg" data-rel="lightcase:Kitchen-After" title="View of dining room after remodel work "></a>
+                                    <a href="img/Kitchen-After/CL5A6626.jpg" data-rel="lightcase:Kitchen-After" title="Kitchen table from Interior Gilt"></a>
+                                    <a href="img/Kitchen-After/CL5A6627.jpg" data-rel="lightcase:Kitchen-After" title="Completed bar in dining room "></a>
+                                    <a href="img/Kitchen-After/CL5A6628.jpg" data-rel="lightcase:Kitchen-After" title="Sink in bar area of dining room "></a>
+                                    <a href="img/Kitchen-After/CL5A6629.jpg" data-rel="lightcase:Kitchen-After" title="Completed island for bar in dining room"></a>
+                                    <a href="img/Kitchen-After/CL5A6630.jpg" data-rel="lightcase:Kitchen-After" title="Cabinets in bar area of dining room "></a>
+                                    <a href="img/Kitchen-After/CL5A6631.jpg" data-rel="lightcase:Kitchen-After" title="Island in bar area of dining room with cabinetry underneath for storage"></a>
+                                    <a href="img/Kitchen-After/CL5A6632.jpg" data-rel="lightcase:Kitchen-After" title="Kitchen table from Interior Gilt"></a>
+                                    <a href="img/Kitchen-After/CL5A6634.jpg" data-rel="lightcase:Kitchen-After" title="completely Rremodeled kitchen and dining room area"></a>
+                                    <a href="img/Kitchen-After/CL5A6635.jpg" data-rel="lightcase:Kitchen-After" title="Backsplash behind sink and marble countertops "></a>
+                                    <a href="img/Kitchen-After/CL5A6637.jpg" data-rel="lightcase:Kitchen-After" title="Custom built cabinets in kitchen"></a>
+                                    <a href="img/Kitchen-After/CL5A6638.jpg" data-rel="lightcase:Kitchen-After" title="Custom built cabinetry in kitchen"></a>
+                                    <a href="img/Kitchen-After/CL5A6639.jpg" data-rel="lightcase:Kitchen-After" title="rennovated dining area looking into living room"></a>
+                                    <a href="img/Kitchen-After/CL5A6641.jpg" data-rel="lightcase:Kitchen-After" title="backsplash behind stove in kitchen"></a>
+                                    <a href="img/Kitchen-After/CL5A6642.jpg" data-rel="lightcase:Kitchen-After" title="Trim work over entry into living room"></a>
+                                    <a href="img/Kitchen-After/CL5A6644.jpg" data-rel="lightcase:Kitchen-After" title="Custom wall paneling in kitchen area"></a>
+                                    <a href="img/Kitchen-After/CL5A6616.jpg" data-rel="lightcase:Kitchen-After" title="rennovated entryway into kitchen area"></a>
+                                    <a href="img/Kitchen-After/CL5A6617.jpg" data-rel="lightcase:Kitchen-After" title="rennovated closet in entryway "></a>
+                                    <a href="img/Kitchen-After/CL5A6618.jpg" data-rel="lightcase:Kitchen-After" title="Custom built cabinets encasing microwave"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <div class="row">
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <a class="grey-text text-darken-3" href="img/Balcony/CL5A6710.jpg" data-rel="lightcase:Balcony" title="Custom built railing for 2nd floor balcony">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="img/balcony_thumb.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Balcony Rebuild
+                                        <i class="fa fa-xs fa-camera right"></i>
+                                    </span>
+                                    <p>An in-progress railing, deck, and patio rebuild at a historic home with more pics to come soon!</p>
+                                    <p align="right">(5 pics)</p>
+                                </div>
+                            </a>
+                            <a href="img/Balcony/CL5A6711.jpg" data-rel="lightcase:Balcony" title="White railing on 2nd floor balcony "></a>
+                            <a href="img/Balcony/CL5A6718.jpg" data-rel="lightcase:Balcony" title="Balcony remodel in progress in Oklahoma City"></a>
+                            <a href="img/Balcony/CL5A6723.jpg" data-rel="lightcase:Balcony" title="White railing added to balcony on 2nd floor"></a>
+                            <a href="img/Balcony/CL5A6724.jpg" data-rel="lightcase:Balcony" title="Patio under blacony in progress"></a>
+                        </div>
+                    </div>
+        
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <a class="grey-text text-darken-3" href="img/Basement/CL5A6727.jpg" data-rel="lightcase:Basement" title="Custom built stairway with lighting leading down to basement in Oklahoma City">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="img/basement_thumb.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Basement Remodel
+                                        <i class="fa fa-xs fa-camera right"></i>
+                                    </span>
+                                    <p>Refurbished, color-accented stairs and a new, cozy room in a historic home's basement</p>
+                                    <p align="right">(4 pics)</p>
+                                </div>
+                            </a>
+                            <a href="img/Basement/CL5A6728.jpg" data-rel="lightcase:Basement" title="Custom stairway with gradient painting leading up the staircase"></a>
+                            <a href="img/Basement/CL5A6731.jpg" data-rel="lightcase:Basement" title="Stairway build with custom painting and lighting"></a>
+                            <a href="img/Basement/CL5A6732.jpg" data-rel="lightcase:Basement" title="Basement rennovation in Oklahoma City"></a>
+                        </div>
+                    </div>
+        
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <a class="grey-text text-darken-3" href="img/GameStore/CL5A8334.jpg" data-rel="lightcase:GameStore" title="Custom prudtc diplays built for commericial client">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="img/gamestore_thumb.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Game Store
+                                        <i class="fa fa-xs fa-camera right"></i>
+                                    </span>
+                                    <p>Custom displays, tables, shelves, walls flooring and sales area for a small business</p>
+                                    <p align="right">(13 pics)</p>
+                                </div>
+                            </a>
+                            <a href="img/GameStore/CL5A8306.jpg" data-rel="lightcase:GameStore" title="Shelving built for commericial client in Edmond, OK "></a>
+                            <a href="img/GameStore/CL5A8308.jpg" data-rel="lightcase:GameStore" title="Large shelving built for product display for commercial client"></a>
+                            <a href="img/GameStore/CL5A8311.jpg" data-rel="lightcase:GameStore" title="Large shelving built for product display for commercial client"></a>
+                            <a href="img/GameStore/CL5A8323.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma  "></a>
+                            <a href="img/GameStore/CL5A8324.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                            <a href="img/GameStore/CL5A8325.jpg" data-rel="lightcase:GameStore" title="Large shelving built for product display for commercial client"></a>
+                            <a href="img/GameStore/CL5A8327.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                            <a href="img/GameStore/CL5A8328.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                            <a href="img/GameStore/CL5A8329.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                            <a href="img/GameStore/CL5A8330.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                            <a href="img/GameStore/CL5A8331.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                            <a href="img/GameStore/CL5A8333.jpg" data-rel="lightcase:GameStore" title="Custom wood product displays built for game store in Edmond, Oklahoma"></a>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <a class="grey-text text-darken-3" href="img/Stone-Tile-Bathroom/CL5A6651.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Tile work in bathroom remodel in Oklahoma City ">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="img/stone-tile-bathroom_thumb.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Stone &amp; Tile Bathroom
+                                        <i class="fa fa-xs fa-camera right"></i>
+                                    </span>
+                                    <p>A clean remodel with marble, glass doors, gold fixtures, and a grand tub</p>
+                                    <p align="right">(8 pics)</p>
+                                </div>
+                            </a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6652.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Custom black marble tile work in shower "></a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6653.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Custom tile work and white marble tile in shower "></a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6654.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="View of completed bathroom remodel "></a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6645.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Sink install and custom made marble counter in bathroom "></a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6646.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Completed shower in bathroom "></a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6647.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Completed shower in bathroom"></a>
+                            <a href="img/Stone-Tile-Bathroom/CL5A6648.jpg" data-rel="lightcase:Stone-Tile-Bathroom" title="Tile work in bathroom after remodel"></a>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <a class="grey-text text-darken-3" href="img/Floral-Bathroom/CL5A6610.jpg" data-rel="lightcase:Floral-Bathroom" title="Counter top and wallpaper in rennovated bathroom">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="img/floral-bathroom_thumb.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        Floral Bathroom
+                                        <i class="fa fa-xs fa-camera right"></i>
+                                    </span>
+                                    <p>Themed wallpaper, paneling, paint, stone tile, and gold fixtures brought together into a classy design</p>
+                                    <p align="right">(6 pics)</p>
+                                </div>
+                            </a>
+                            <a href="img/Floral-Bathroom/CL5A6611.jpg" data-rel="lightcase:Floral-Bathroom" title="Custom made cabinets in bathroom and floral wallpaper"></a>
+                            <a href="img/Floral-Bathroom/CL5A6612.jpg" data-rel="lightcase:Floral-Bathroom" title="Tile installed in bathroom and siding on walls "></a>
+                            <a href="img/Floral-Bathroom/CL5A6613.jpg" data-rel="lightcase:Floral-Bathroom" title="Lighting and mirror installed above bathrrom counter top"></a>
+                            <a href="img/Floral-Bathroom/CL5A6614.jpg" data-rel="lightcase:Floral-Bathroom" title="Tile work in bathroom"></a>
+                            <a href="img/Floral-Bathroom/CL5A6609.jpg" data-rel="lightcase:Floral-Bathroom" title="Customized sink, countertop, and woodwork in bathroom "></a>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m6 s12">
+                        <div class="card hoverable">
+                            <a class="grey-text text-darken-3" href="img/SPowell-Before/S_Powell_1.jpg" data-rel="lightcase:SPowell-Before" title="Custom made wooden product display">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="img/S_Powell_Thumb.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        S. Powell and Co.
+                                        <i class="fa fa-xs fa-camera right"></i>
+                                    </span>
+                                    <p>In progress construction for a elite fashion store opening up in Oklahoma City in 2018 </p>
+                                    <p align="right">(11 pics)</p>
+                                </div>
+                            </a>
+                            <a href="img/SPowell-Before/S_Powell_2.jpg" data-rel="lightcase:SPowell-Before" title="Custom wood product displays along wall"></a>
+                            <a href="img/SPowell-Before/S_Powell_3.jpg" data-rel="lightcase:SPowell-Before" title="Custom wooden ceiling and product displays"></a>
+                            <a href="img/SPowell-Before/S_Powell_4.jpg" data-rel="lightcase:SPowell-Before" title="Custom built wood clothing displays and shelves"></a>
+                            <a href="img/SPowell-Before/S_Powell_5.jpg" data-rel="lightcase:SPowell-Before" title="Custom built wood clothing displays and shelves"></a>
+                            <a href="img/SPowell-Before/S_Powell_6.jpg" data-rel="lightcase:SPowell-Before" title="Custom woodwork for product displays and shelves"></a>
+                            <a href="img/SPowell-Before/S_Powell_7.jpg" data-rel="lightcase:SPowell-Before" title="Wood product displays and doors "></a>
+                            <a href="img/SPowell-Before/S_Powell_8.jpg" data-rel="lightcase:SPowell-Before" title="Front window displays for featured products"></a>
+                            <a href="img/SPowell-Before/S_Powell_9.jpg" data-rel="lightcase:SPowell-Before" title="Custom built Wooden cabinets with slide out drawers "></a>
+                            <a href="img/SPowell-Before/S_Powell_11.jpg" data-rel="lightcase:SPowell-Before" title="Front window display for featured products"></a>
+                            <a href="img/SPowell-Before/S_Powell_12.jpg" data-rel="lightcase:SPowell-Before" title="Custom made wood display case for products"></a>
+                        </div>
+                    </div-
+
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </section>
+    <section id="Contact" class="scrollspy">
+        <div class="container">
+            <div class="row">
+                <h5 align="center">Request a Quote</h5>
+            </div>
+            <div class="row">
+                <div class="input-field col m4 s12">
+                    <i class="fa fa-user grey-text prefix"></i>
+                    <input id="contact_name" type="text" class="validate">
+                    <label for="contact_name">Name</label>
+                </div>
+                <div class="input-field col m4 s12">
+                    <i class="fa fa-envelope grey-text prefix"></i>
+                    <input id="contact-email" type="email" class="validate">
+                    <label for="contact-email">Email</label>
+                </div>
+                <div class="input-field col m4 s12">
+                    <i class="fa fa-phone grey-text prefix"></i>
+                    <input id="contact-phone" type="text" class="validate">
+                    <label for="contact-phone">Phone</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m4 s12">
+                    <p>Type of Work:</p>
+                    <p>
+                        <input name="contact-type" type="radio" id="individual-contact" />
+                        <label for="individual-contact">Residential</label>
+                    </p>
+                    <p>
+                        <input name="contact-type" type="radio" id="commercial-contact" />
+                        <label for="commercial-contact">Commercial</label>
+                    </p>
+                </div>
+                <div class="input-field col m4 s12">
+                    <i class="fa fa-list-ul grey-text prefix"></i>
+                    <select multiple>
+                        <option value="" disabled selected>Choose From Our Services</option>
+                        <option value="general-construction">General Construction</option>
+                        <option value="carpentry">Carpentry</option>
+                        <option value="paint">Paint</option>
+                        <option value="drywall">Drywall</option>
+                        <option value="flooring">Flooring</option>
+                        <option value="tile-and-stone">Tile &amp; Stone</option>
+                        <option value="other-services">Other Services</option>
+                    </select>
+                    <label>Services Desired</label>
+                </div>
+                <div class="input-field col m4 s12">
+                    <i class="fa fa-sm fa-calendar grey-text prefix"></i>
+                    <input name="start-date" type="text" id="start-date" class="datepicker">
+                    <label for="start-date">Projected Starting Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa fa-edit grey-text prefix"></i>
+                    <textarea id="job-description" class="materialize-textarea"></textarea>
+                    <label for="job-description">Description of Work to Complete</label>
+                </div>
+            </div>
+            <div class="row">
+                <a class="waves-effect waves-light grey btn right">
+                    Send
+                    <i class="fa fa-arrow-right right"></i>
+                </a>
+                <a class="waves-effect waves-light btn-flat right">
+                    <i class="fa fa-times left"></i>
+                    Reset Form
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col m2 s8 offset-s2 center-align">
+                    <img src="img/Mason_Co_Logo.svg">
+                </div>
+                <div class="col m8 s9 grey-text text-lighten-4">
+
+                    <h5 class="white-text">Mason &amp; Co.</h5>
+
+                    <p>
+
+                        <i class="fa fa-phone"></i>
+                        &nbsp;
+                        <a href="tel:4055467349">
+                            405.546.7349
+                        </a>
+
+                    </p>
+                    <p>
+
+                        <i class="fa fa-envelope"></i>
+                        &nbsp;
+                        <a href="mailto:info@masonandcompany.net">
+                            info@masonandcompany.net
+                        </a>
+
+                    </p>
+                </div>
+                <div class="col m2 s3 center">
+                    <div class="row center-align">
+                        Follow us:
+                    </div>
+                    <div class="row">
+                        <div class="col s6 center-align">
+
+                            <a href="//www.facebook.com/Mason-and-Co-116020862428048/" target="_blank">
+                                <i class="fab fa-3x fa-facebook-f"></i>
+                            </a>
+
+                        </div>
+                        <div class="col s6 center-align">
+
+                            <a href="//www.instagram.com/masonandcompanyllc/" target="_blank">
+                                <i class="fab fa-3x fa-instagram"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                
+                Website Design &copy;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+                <a class="white-text" href="//innov8tive.io" target="_blank">Innov8tive</a>
+                - All Rights Reserved.
+
+            </div>
+        </div>
+    </footer>
+    <!-- Required JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="application/javascript" src="js/lightcase.js"></script>
+    <script type="application/javascript" src="js/jquery.events.touch.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // Initialize scroll transitions and navbar anchor point
+            $('#content').pushpin({
+                top: $('#content').offset().top 
+            });
+            $('.scrollspy').scrollSpy({
+                scrollOffset: 0
+            });
+            
+            // Initialize LightCase lightbox gallery
+            $('a[data-rel^=lightcase]').lightcase({
+                maxWidth: 1920,
+                maxHeight: 1920
+            });
+
+            // Initialize lead capture input selects
+            $('select').material_select();
+        });
+        
+        // Initialize carousel and parameters
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true
+        });
+
+        // Parameters for lead capture start date input
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            today: '',
+            clear: 'Clear',
+            close: 'Ok',
+            closeOnSelect: false // Close upon selecting a date,
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Lily Pad - A Seaside Florida Vacation Rental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A multi-family vacation rental located in Seagrove Beach less than 1 mile from Seaside and Grayton Beach State Park near the beaches of South Walton between Destin and Panama City in Northwest Florida">
+    <meta name="author" content="Ian Garcino">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lightcase.css">
+    <style>
+        /* Navigation Styles */
+        nav {
+            z-index: 999;
+        }
+        a.active {
+            background-color: rgba(0,0,0,0.2);
+        }
+        
+        /* Carousel Slides */
+        .carousel {
+            min-height: 70vh;
+        }
+        .carousel-item {
+            color: white;
+            text-shadow: 0 0 10px rgba(0,0,0,0.7);
+            background-size: cover;
+            background-position: center center;
+        }
+        .carousel-item .btn {
+            text-shadow: none;
+        }
+        #slide-1 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(img/01.jpg);
+        }
+        #slide-2 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(img/09.jpg);
+        }
+        #slide-3 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(img/21.jpg);
+        }
+        #slide-4 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(img/13.jpg);
+        }
+        
+        /* Element Styles */
+        .lilypad-logo {
+            fill: green;
+            opacity: 0.4;
+        }
+        #Amenities table td {
+            vertical-align: top;
+        }
+        #Amenities {
+            position: relative;
+            max-height: 650px;
+            overflow: hidden;
+            background-color: whitesmoke;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        .read-more {
+            text-align: center;
+            background-color: whitesmoke;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="intro">
+        <div class="carousel carousel-slider center" data-indicators="true">
+            <div class="carousel-fixed-item center">
+                <a class="btn waves-effect green" href="//www.vrbo.com/1061011" target="_blank">
+                    Make a Reservation
+                </a>
+            </div>
+            <div class="carousel-item" href="#one!" id="slide-1">
+                <h2>Welcome to The Lily Pad</h2>
+                <p>Located in beautiful Seagrove/Seaside, Florida</p>
+                <a class="btn waves-effect white green-text darken-text-3" href="#Overview">Read More</a>
+            </div>
+            <div class="carousel-item" href="#two!" id="slide-2">
+                <h2>Amenities Perfect for 1-2 Families</h2>
+                <p>Including 2 full kitchens and living areas</p>
+                <a class="btn waves-effect white green-text darken-text-3" href="#Amenities">See Features</a>
+            </div>
+            <div class="carousel-item" href="#three!" id="slide-3">
+                <h2>Private Lagoon-shaped Pool</h2>
+                <p>Surrounded by flagstone pavers and landscaping with loungers, tables and chairs </p>
+                <a class="btn waves-effect white green-text darken-text-3" href="#Photos">More Photos</a>
+            </div>
+            <div class="carousel-item" href="#four!" id="slide-4">
+                <h2>Canoe or Kayak to Western Lake</h2>
+                <p>Backyard access to a canal with Gulf of Mexico access</p>
+                <a class="btn waves-effect white green-text darken-text-3" href="#Map">View Map</a>
+            </div>
+        </div>
+    </section>
+    <nav id="content">
+        <div class="nav-wrapper green darken-1">
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="#Overview">
+                        <i class="fa fa-2x fa-info-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Amenities">
+                        <i class="fa fa-2x fa-list-ul"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Photos">
+                        <i class="fa fa-2x fa-camera"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Map">
+                        <i class="fa fa-2x fa-map"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Contact">
+                        <i class="fa fa-2x fa-question-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//www.vrbo.com/1061011" target="_blank">
+                        <i class="fa fa-2x fa-sign-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="Overview" class="scrollspy">
+        <div class="row">
+            <div class="col l8 offset-l2 s10 offset-s1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 1024" class="lilypad-logo"><path d="M1329.8 605.4c1.7 2.9 5.2 8.1 5.2 14.5 0 15.6-10.4 27.7-38.1 27.7 -16.8 0-26-7.5-26-24.3 0-8.1 1.2-15 3.5-19.7V336l-67.6 13.3c-4.6 2.9-11 5.8-17.9 5.8 -16.2 0-26.6-9.8-26.6-25.4 0-16.8 11.6-29.5 23.7-29.5 9.8 0 12.7 1.7 16.8 4l76.9-15.6c8.1-9.8 31.8-12.7 42.2-6.9l86.7-15.6c6.4-2.9 11.6-4 17.9-4 15 0 25.4 9.8 25.4 27.2 0 14.5-9.3 27.2-24.9 27.2 -8.1 0-12.7-1.7-17.3-4l-79.8 14.5V605.4z"/><path d="M1617.6 474.1c0-19.7-2.9-24.9-12.7-24.9 -16.2 0-51.4 11-83.2 52v106.4c2.9 4 4.6 9.3 4.6 16.2 0 14.5-20.2 23.7-38.7 23.7 -17.3 0-23.7-6.4-23.7-18.5 0-9.2 1.2-15.6 4-19.1V310.6c-0.6-5.2-5.2-11.6-5.2-16.8 0-19.1 15.6-29.5 36.4-29.5 9.3 0 27.7 11.6 27.7 26 0 5.8-2.9 12.1-5.2 17.3v136.4h1.2c36.4-33.5 76.9-51.4 108.1-51.4 30.1 0 40.5 18.5 40.5 57.2v159.5c0.6 3.5 4.6 8.1 4.6 12.7 0 13.9-18.5 25.4-34.7 25.4 -17.3 0-30.1-7.5-30.1-19.7 0-6.4 1.7-14.5 6.4-19.1V474.1z"/><path d="M1958.1 459.1c0 26-17.9 49.7-152 73.4l-26.6 4.6c-2.9 9.2-4 19.7-4 31.2 0 28.3 15 39.9 40.5 39.9 39.3 0 72.8-23.1 83.2-38.1 -1.7-13.9 9.8-25.4 28.9-25.4 21.4 0 26 13.3 26 24.9 0 16.2-50.3 84.4-145.1 84.4 -49.1 0-86.1-21.4-86.1-81.5 0-106.9 75.1-184.4 150.3-184.4C1939 388 1958.1 436.6 1958.1 459.1zM1790.5 496.1c101.7-17.9 116.2-26.6 116.2-34.7 0-13.9-9.8-28.9-34.7-28.9C1838.4 432.5 1807.2 459.1 1790.5 496.1z"/><path d="M2176 600.2l109.8-13.9c4.6-2.9 15-7.5 20.2-7.5 10.4 0 26 6.9 26 25.4 0 22.5-11.6 32.9-23.7 32.9 -4.6 0-11.6-1.2-16.8-2.9l-121.4 15c-5.8 1.7-16.8 4-24.9 4 -19.1 0-32.4-8.7-32.4-27.2 0-9.2 2.9-16.2 7.5-19.7V319.2c-1.7-3.5-4-9.8-4-15.6 0-23.7 17.3-31.8 34.1-31.8 15 0 31.2 6.4 31.2 30.6 0 5.8-3.5 12.1-5.8 16.8V600.2z"/><path d="M2377.8 440c-3.5-3.5-5.2-9.8-5.2-15 0-16.2 1.2-33.5 36.4-33.5 13.3 0 28.9 15 28.9 26.6 0 10.4-5.2 16.2-6.4 19.7V603c2.9 2.3 7.5 9.3 7.5 16.2 0 19.7-24.3 28.3-42.2 28.3 -15 0-26-10.4-26-27.2 0-10.4 4.6-16.8 6.9-19.7V440zM2438.5 307.7c0 34.1-16.2 53.8-34.7 53.8 -18.5 0-26-11.6-26-28.3 0-28.9 12.7-52 34.7-52C2429.2 281.1 2438.5 290.9 2438.5 307.7z"/><path d="M2502 316.3c-2.3-5.2-5.8-12.7-5.8-19.7 0-24.9 6.9-31.2 35.8-31.2 15 0 32.4 9.8 32.4 27.2 0 10.4-3.5 17.9-8.7 25.4v287.9c6.4 5.2 9.3 11 9.3 17.3 0 9.8-14.5 24.3-34.7 24.3 -17.9 0-33.5-9.8-33.5-27.7 0-5.8 2.3-10.4 5.2-15.6V316.3z"/><path d="M2609.6 441.2c-8.1-5.8-11.6-11.6-11.6-22.5 0-16.2 19.1-26 31.2-26 22 0 30.6 14.5 28.9 30.1l84.4 147.4 59.5-153.2c0-12.1 6.4-26.6 26.6-26.6 19.1 0 32.4 9.8 32.4 24.3 0 8.7-4.6 16.2-12.7 20.8l-102.9 249.7c-25.4 63-55.5 76.9-90.2 76.9 -30.1 0-59-16.2-68.8-49.1 -3.5-9.8-9.8-6.4-9.8-20.2 0-15.6 11-26.6 27.7-26.6 17.9 0 29.5 6.4 29.5 21.4 0 4.6-1.7 8.7-2.3 12.7 0 8.7 10.4 17.3 23.7 17.3 21.4 0 37-23.1 62.4-89L2609.6 441.2z"/><path d="M3010.7 391.5c-9.2-1.2-16.2-9.2-16.2-24.9 0-15.6 6.9-25.4 16.2-30.6v-20.8c-1.7-3.5-2.9-9.8-2.9-15.6 0-14.5 17.9-24.9 29.5-24.9 22 0 32.9 11 28.3 29.5v6.9c32.9-16.8 71.7-38.7 136.4-38.7 53.8 0 80.9 23.7 80.9 61.3 0 63.6-87.9 135.3-216.8 155.5v117.9c2.9 4 6.4 9.2 6.4 15 0 20.8-6.4 25.4-39.3 25.4 -19.1 0-29.5-11.6-29.5-24.3 0-8.1 1.7-12.7 6.9-19.1V391.5zM3066.2 441.2c101.7-15 159.5-61.3 159-94.8 0-12.1-13.3-24.3-41-24.3 -36.4 0-73.4 12.1-117.9 39.9V441.2z"/><path d="M3430.4 448.7c0-15-5.2-22.5-20.2-22.5 -31.8 0-58.4 11-79.8 24.3 1.2 4.6-7.5 16.2-24.3 16.2 -13.9 0-24.3-15.6-24.3-27.2 0-11 14.4-26 26.6-23.7 29.5-19.1 69.4-31.8 122-31.8 29.5 0 52.6 19.1 52.6 52v177.5c2.3 1.7 4.6 8.1 4.6 13.3 0 17.3-20.8 21.4-38.1 21.4 -19.1 0-24.9-8.7-24.9-17.9 0-5.2 2.3-9.8 4.6-13.9v-26h-0.6c-41 45.1-80.9 65.3-128.9 65.3 -29.5 0-53.2-16.8-53.2-46.8 0-50.9 63-116.2 183.8-130.6V448.7zM3429.2 514.6c-76.3 8.7-129.5 54.9-129.5 80.9 0 10.4 8.1 13.3 19.7 13.3 42.2 0 109.8-50.3 109.8-76.3V514.6z"/><path d="M3733.3 310.6c-5.8-3.5-8.1-11-8.1-20.2 0-14.5 14.5-24.9 34.7-24.9 19.1 0 28.3 12.7 28.3 26.6l-1.7 19.7v297.7c2.9 1.7 7.5 7.5 7.5 14.5 0 17.3-11 24.3-35.3 24.3 -19.7 0-28.3-8.1-28.3-23.1 0-5.8 0-11 2.9-13.3v-39.9c-28.9 43.4-90.2 83.2-141 83.2 -34.1 0-64.2-23.1-64.2-68.2 0-90.8 93.1-181.5 166.5-181.5 16.2 0 27.7 2.9 38.7 9.8V310.6zM3583 575.3c0 17.9 5.8 30.6 27.2 30.6 28.3 0 57.8-20.8 81.5-46.2 23.1-22.5 40.5-39.3 40.5-72.3 0-22-12.1-38.1-37-38.1C3647.7 449.3 3583 527.9 3583 575.3z"/><path d="M469 915.7c-12.6 0.5-25.4 0.7-38.2 0.7 -100.5 0-194.4-14.8-251-39.7 -8.4-3.7-15.7-7.7-22.1-12 0.3 0.3 0.5 0.5 0.8 0.8 45.9 45.9 99.4 82 158.9 107.2C379 998.8 444.5 1012 512 1012c67.5 0 133-13.2 194.6-39.3 59.5-25.2 113-61.2 158.9-107.2 22.3-22.3 42.3-46.5 59.9-72.2 -31 27.4-85.6 52-168.4 76.1C693.6 887.9 592.1 911 469 915.7z"/><path d="M149.5 774c7.8-7 17.8-13.7 30.2-20 -23.7-5.3-43-11.3-59-18.2 -20.1-8.7-35.1-19.3-44.7-31.7 -12.9-16.7-15.8-36.9-7.9-55.3 10.9-25.6 41.1-46.1 95.1-64.6 -7.8-0.7-15.1-1.4-20.4-1.8 -41.5-3.1-81.9 10.8-122.4 22.2 6.5 34.9 16.8 69 30.8 102C71.7 755 99.4 799.4 133.7 839c-2.3-4.6-3.9-9.5-4.7-14.6C127.3 814.1 127.7 793.7 149.5 774z"/><path d="M921.9 578c-24.1 2.3-66.6 9-98.8 14.4l0 0c17.9 6.6 34.4 13.8 49.1 21.6 42.6 22.5 70.1 48.9 81.8 78.3 5.7 14.4 7.4 29.3 5 43.8 4.9-9.7 9.4-19.5 13.7-29.6 15.8-37.3 26.8-75.9 33.1-115.6C977.9 583.5 950 575.3 921.9 578z"/><path d="M240.1 594.1c-23.9 5.1-46.4 11.1-67 18.1 -38.4 13.1-69.6 29.6-77.5 48.2 -7.4 17.4 6 34.8 37 48.1 28.6 12.3 67.9 20.5 109.4 26.7 19.6 2.9 45.4 6.5 70.3 7.1 1.5-0.3 3.1-0.6 4.6-0.9 0.4-0.1 0.9-0.1 1.3-0.2 0.3 0.7 0.7 1.4 1 2.1 0 0 0 0-0.1 0 -3.5 0.6-7.1 1.3-10.6 2 -11.9 2.4-23.5 4.9-34.7 7.7 -44.1 10.9-84.7 25.3-104.4 43.1 -21 19-12.7 38.2 22.2 53.5 55.8 24.5 148.2 37.2 239.1 37.2 12.4 0 24.8-0.2 37.1-0.7 102.8-4 200.8-21.8 280.8-45.1 75.4-22 145.7-50.1 169.9-83.7 41-57-27.7-119.6-158-153.1l0 0c-78.8 16.4-156.8 37.7-236.8 38.2C427.9 642.8 334.7 610.9 240.1 594.1"/><path d="M972.7 317.4c-25.2-59.5-61.2-113-107.2-158.9 -45.9-45.9-99.4-82-158.9-107.2C645 25.2 579.5 12 512 12c-67.5 0-133 13.2-194.6 39.3 -59.5 25.2-113 61.2-158.9 107.2 -45.9 45.9-82 99.4-107.2 158.9C25.2 379 12 444.5 12 512c0 17.5 0.9 34.8 2.7 51.9 24.5-6.6 48.8-13.7 73.4-18.4 -18.1-18.3-20.3-43.1-19.9-68.9 23.6-10.8 47.3-20.5 72.2-19.7 -10.2-32.2-10.2-73-15.4-103.9 24.5-8.1 50.4-13.5 74.9-15.1 -7.3-34.2-9.1-68.3-5.2-102.7 43.1-0.2 81.3 5.4 110 22.6 4.1-29.7 7.3-59.3 7.7-88.4 30.3 38.2 66.6 73 100.4 109.1 20.5-57.3 47.9-107.5 79.2-145 44 41.3 73.9 95.6 86.7 147.3 21.4-33.6 43.2-67 62.7-101.4 5.2 29.7 15.4 59.9 25.9 90 29.3-20.5 70.1-26.8 116.2-26.4 3.3 29.2 2.5 58.5-2.5 87.7 16-0.4 32.6 1.2 50 4.4 -8.1 36.9-5.2 80.5-9.8 119.3 28.6-3.3 59.3 3.9 81.9 13.7 -5.6 25.7-1.9 44.6-6.6 64.1 6.8-0.8 13.5-1.4 20.3-1.7 31.9-2.2 63.1 5.9 94.3 14.1 0.7-10.8 1-21.7 1-32.6C1012 444.5 998.8 379 972.7 317.4z"/><path d="M300 292.2c-21.8-9.8-43.6-13.5-65.4-11 -5 19.1-4.8 38-2.7 57 23.4 2.1 44.4 8.7 61.2 20.7C294.4 336.8 297.1 314.6 300 292.2z"/><path d="M747.2 335.5c1-15.6 0.4-31.1-3.7-46.7 -22-2.5-43.8 1.2-65.8 11.2 7 20.8 13.3 41.5 17.6 62C710.9 348.8 728.3 340.3 747.2 335.5z"/><path d="M151.6 481.5c-18 0.2-35.3 3.9-51.6 13.5 -0.4 19.3 4.4 34.6 12.9 46.7 10.6-1.2 21.2-1.5 31.9-1.2 44.7 1.3 89 8.1 133.3 16.5 1.2 0.2 2.5 0.5 3.7 0.7 -0.8-0.3-1.7-0.6-2.5-0.9 -41.5-14.5-81-32.5-114.7-60.3C159.5 492.3 155.2 487.1 151.6 481.5z"/><path d="M200.6 480.7c45.4 31.3 102.9 48.1 159.1 65.3 -22.6-16.2-41.3-35.5-51.4-61.4 -11.2-28.8-15.6-58.7-16.2-89.6 -31.9-20.5-65.6-21.2-101.4 0C189.4 421.6 179.2 465.8 200.6 480.7z"/><path d="M816.1 482.2c-5.2 19.5-13.9 36.7-29 50.2 -11 9.8-22.6 18.1-34.2 25.1 37.3-8.3 74.5-16.2 112.2-21.4 0-12.2-3.1-23.2-1-39.6C852.4 488.4 834.1 482.8 816.1 482.2z"/><path d="M607.4 549.4c50.6-6.9 99.2-18.5 141.7-52.9 37.5-30.1 31.5-80.9 38-119.5 -33-4.4-61.2 9.3-86.5 26.1 0.8 20.9-1.7 41.3-9.3 61.6C676.9 503.3 644.7 528.4 607.4 549.4z"/><path d="M336.3 454.6c14 35.7 54.7 63 90.3 89.2 13 9.5 25.3 18.9 35.4 28.5 0.1-9.2 1-19 2.2-29.1 5.2-44.8 16.7-96.6 1.9-134.4 -24.1-61.2-87.1-101.7-127.8-153.5C340.4 321.2 312.2 393.6 336.3 454.6z"/><path d="M496 219.5c-25.3 25.3-43.1 56.2-53.1 92.9 25.9 30.7 48.5 63.3 62.9 100.6 0.2 0.2 0.2 0.4 0.2 0.4 12.9-31.5 29.3-61.6 47.1-91.1C543.1 282.4 526.1 246.9 496 219.5z"/><path d="M533.6 440.7c-11.5 32-12.5 68.6-14.6 103.3 -0.4 6.2-0.8 12.3-1.3 18.3 6.8-6.3 14.4-12 22.4-17.5 45.6-31.1 105.3-52.5 123.2-102.3 19.3-53.9-23.4-120.9-34-177.4C597.6 323.9 556.2 378.2 533.6 440.7z"/></svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <h5>Less than a mile from the beach and 1 mile to Seaside Center...</h5>
+                <p>Under new ownership since May 2017. 4+ Bedroom, 3 Bath with private pool on a canal within walking and biking distance to Seaside Proper and Seagrove Center. The home is 3 blocks to the beach and a 5 min bike ride to Seaside Town Center (Proper). This home has a cottage house attached for the full 4+ bedrooms. To fully utilize the property a mix of adults and children are best. This property can only handle a max of 8 adults due to bed count. Close to the grocery store (Publix), banks, liquor store, dry cleaning and more.</p>
+                <p>Experience the charm and nature of Old Seagrove Beach in this recently renovated 4+ bedroom, 3 bath cottage that overlooks the canal. Paddle your troubles away to Western Lake in a canoe or kayak – if you’re lucky, nature will provide you with an opening into the Gulf of Mexico! A ten minute walking stroll will take you into Seaside where you can enjoy award-winning restaurants, unique shops and the ambiance of a quaint coastal village. Private lagoon-shaped pool surrounded by flagstone pavers and landscaping with loungers, tables and chairs for your relaxation. Courtyard lights cast a glow while grilling fresh seafood or burgers for dinner. The Lily Pad is perfect for 1-2 families, offering 2 full kitchens and 2 living areas, whole-house Rinnai tank-less water heater system, tongue-in-groove ceilings and both tile and hardwood flooring throughout.</p>
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="fa fa-angle-right"></i>
+                            First Floor
+                        </div>
+                        <div class="collapsible-body">
+                            <span>The main entrance into The Lily Pad takes you through a courtyard past the laundry room and butler’s pantry, for your convenience in dropping off your beach towels on your way in. The open kitchen, dining and living room all look out over the pool with a gas grill conveniently located on deck just outside the kitchen. Granite countertops and ample cabinetry in both the kitchen and laundry room. Front loading high capacity HE washer and dryer. Kitchen offers all electric GE Profile stainless appliances, including side-by-side fridge, dishwasher, microwave and glass-top range, garbage disposal, over-sink glass cabinetry and lovely pendant lighting. Breakfast bar has 4 bar stools. Step down into the dining area featuring dining table that, with additional leaf, will seat 10 and gas fireplace with custom curved mantle and built-in shelving. Living room has two sofas, 2 side chairs, wall-mounted LCD TV and DVD player. The first bedroom on this floor has twin bunks, (2 twins) LCD TV, separate dressing area with closet, desk and lamp, Twin air matress in the closet and a outside entrance. The second bedroom on this floor has a Queen bed, closet, two side tables with lamps, LCD TV, and bathroom with walk-in shower. French doors from this room also lead into living room.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="fa fa-angle-right"></i>
+                            Second Floor
+                        </div>
+                        <div class="collapsible-body">
+                            <span>Lofted master bedroom with King bed, wood floors, ceiling fan, two nightstands with lamps, closet, LCD TV, DVD player and chest of drawers. Private outdoor balcony overlooks the canal and pool, with two chairs, coffee table and loveseat. Large private bath with Jacuzzi tub, granite-topped dual vanities with center make-up table and separate large, tiled walk-in shower.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="fa fa-angle-right"></i>
+                            Guest Cottage
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                <p>Enter the guest cottage house through the open front porch, up the staircase to the second floor living area is a large loft like area with vaulted ceilings, overhead lights & fans. This area has a full kitchen with Corian counter-tops, glass top range, refrigerator/freezer with ice maker, dishwasher, disposal and microwave. It has a bistro table and 2 chairs plus 3+ bar stools at breakfast bar. Completing the living area is a LCD TV, DVD player, plush side chair with ottoman, coffee and end tables. There is a small closet, sofa is a queen sleeper and there are 2 built-in bunk beds for more sleepability. A full bathroom with walk-in shower is off of the loft area. There is a private queen bedroom with 2 closets, fan and overhead lighting, LCD TV and a chest of drawers.</p>
+                                <p>Between the king and queen bedrooms on the second floor is a large closet which can be locked off or opened to both or either room. It is a perfect area for a pack & play if needed.</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="fa fa-angle-right"></i>
+                            Outside
+                        </div>
+                        <div class="collapsible-body">
+                            <span>Seasonal heated lagoon pool with flagstone pavers, lounges, chairs and tables. There is a gas grill on the side deck with overhead patio lighting and parking for 2-3 cars.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <i class="fa fa-angle-right"></i>
+                            Payment Info
+                        </div>
+                        <div class="collapsible-body">
+                            <span>
+                                <p>Accepted forms of payment: All credit cards, money orders, cashier's checks and personal checks (in advance for clearing), through VRBO. Please ask about our rate specials during certain times. We also have direct pay through our company.</p>
+                                <p>Notes: Any stay that includes a holiday is at holiday rate, weekly or nightly.</p>
+                                <p>50% deposit required within the first week of placing your reservation. Final payment, taxes and cleaning fee due 30 days before arrival.</p>
+                                <p>Cancellation Policy available contact owner.</p>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <section id="Amenities" class="scrollspy">
+        <h5 class="center">Amenities</h5>
+        <h6 class="center">Seagrove Beach House Accommodation and Amenities</h6>
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <table class="white striped">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Property Type:</strong>
+                            </td>
+                            <td colspan=2>
+                                House
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Meals:</strong>
+                            </td>
+                            <td colspan=2>
+                                Guests provide their own meals
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Floor Area:</strong>
+                            </td>
+                            <td colspan=2>
+                                2823 sq. ft.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>House Rules:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Check-in: 4:00 PM / Check-out: 10:00 AM</li>
+                                    <li>Max. occupancy: 13 depending on the adult/children mix. Please inquire.</li>
+                                    <li>Max. adults: 8</li>
+                                    <li>Min. age of primary renter: 26</li>
+                                    <li>Children welcome. No cribs or bunks for smaller children.</li>
+                                    <li>No diving in the pool. Swin at your own risk. No glass, plastic or aluminum in the pool.</li>
+                                    <li>Pets not allowed. No pets at all. We are sorry.</li>
+                                    <li>No smoking only. No smoking anywhere in the home or on the grounds.</li>
+                                    <li>Parties/events not allowed, subject to immediate eviction.</li>
+                                    <li>Excessive noise, loud parties, unruly behavior, or any illegal acts will result in eviction according to F.S. 509.141 without a refund.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Location Type:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Not beachfront, but 3 blocks to the beach, short walk or bike ride to Seaside</li>
+                                    <li>Near the ocean - Seaside, Seagrove, Watercolor, WaterSound, Alys Beach, Rosemary Beach, Grayton Beach</li>
+                                    <li>Rural in between Destin and Panama City</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Theme:</strong>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Away From It All</li>
+                                    <li>Family</li>
+                                    <li>Historic</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Romantic</li>
+                                    <li>Sports &amp; Activities</li>
+                                    <li>Tourist Attractions</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>General:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Air conditioning</li>
+                                    <li>Heating</li>
+                                    <li>Fireplace, gas, seasonal</li>
+                                    <li>Hair dryer</li>
+                                    <li>Iron &amp; board</li>
+                                    <li>Clothes dryer, high efficiency</li>
+                                    <li>Washing machine, high efficiency, plus use proper detergent as to not cause damage</li>
+                                    <li>Initial linens provided</li>
+                                    <li>Basic supply of towels provided</li>
+                                    <li>Internet, password to be given at check-in</li>
+                                    <li>2 living rooms, one in the main home, the other in the cottage house</li>
+                                    <li>Parking, 2-3 cars in the driveway only. Do not block the storage shed on the property.</li>
+                                    <li>Garage (NOT AVAILABLE, reserved for owners)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Kitchen:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Two full kitchens with all the necessities</li>
+                                    <li>Coffee maker (not a Keurig)</li>
+                                    <li>Dishes &amp; utensils, everything you need</li>
+                                    <li>Dishwasher</li>
+                                    <li>Built-in microwaves</li>
+                                    <li>Electric ovens</li>
+                                    <li>Electric stoves</li>
+                                    <li>Refrigerators, ice-maker/water fridgerator</li>
+                                    <li>Toasters</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Dining:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Dining area seating for 8 people</li>
+                                    <li>Extra folding chairs in downstairs queen bathroom closet</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Bathrooms:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>3 Bathrooms</li>
+                                    <li>Master Bathroom - Jetted tub (Jacuzzi), double vanity, toilet room, large walk-in shower</li>
+                                    <li>Cottage house bathroom - toilet, upstairs bathroom has showers only</li>
+                                    <li>Downstairs - toilet, shower</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Bedrooms:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>5 bedrooms, sleeps 13</li>
+                                    <li>Upstairs Master Bedroom - 1 king , Upstairs loft master bedroom</li>
+                                    <li>Upstairs bedroom - 1 queen , This can be locked off from the cottage</li>
+                                    <li>Cottage house-upstairs - 1 sleep sofa /futon , 2 bunk bed , in the living room of the cottage house, queen sofa sleeper</li>
+                                    <li>Downstair Queen Bedroom - 1 queen , Main floor next to the bunk room. Shower in the bathroom</li>
+                                    <li>Downstairs Bunk room - 2 bunk bed , Downstairs next to the queen bedroom, air mattress in closet</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Entertainment:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Books</li>
+                                    <li>DVD Player</li>
+                                    <li>Stereo</li>
+                                    <li>Several televisions</li>
+                                    <li>Satellite / Cable internet available including outside by the pool</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Outside:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>Balcony off the master bedroom/bathroom overlooking the pool and canal</li>
+                                    <li>Deck and three patios</li>
+                                    <li>You can kayak or canoe straight from the canal on the back of the property</li>
+                                    <li>Lawn &amp; garden</li>
+                                    <li>Patio area with natural gas outdoor grill with lighting above</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Pool / Spa:</strong>
+                            </td>
+                            <td colspan=2>
+                                <ul class="browser-default">
+                                    <li>NO DIVING, heated seasonal pool with lush landscaping and flagstone deck</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Attractions:</strong>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Churches</li>
+                                    <li>Festivals</li>
+                                    <li>Health/beauty spa</li>
+                                    <li>Marina</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Playground</li>
+                                    <li>Recreation center</li>
+                                    <li>Restaurants</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Leisure Activities:</strong>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Beachcombing</li>
+                                    <li>Bird watching</li>
+                                    <li>Boating</li>
+                                    <li>Eco tourism</li>
+                                    <li>Outlet shopping</li>
+                                    <li>Paddle boating</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Photography</li>
+                                    <li>Scenic drives</li>
+                                    <li>Shopping</li>
+                                    <li>Sight seeing</li>
+                                    <li>Walking</li>
+                                    <li>Wildlife viewing</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Local Services &amp; Businesses:</strong>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>ATM/bank</li>
+                                    <li>Babysitter</li>
+                                    <li>Fitness center</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Groceries</li>
+                                    <li>Massage therapist</li>
+                                    <li>Medical services</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Sports &amp; Adventure Activities:</strong>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Cycling</li>
+                                    <li>Deepsea fishing</li>
+                                    <li>Fishing</li>
+                                    <li>Golf</li>
+                                    <li>Jet skiing</li>
+                                    <li>Kayaking</li>
+                                    <li>Parasailing</li>
+                                    <li>Pier fishing</li>
+                                    <li>Sailing</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="browser-default">
+                                    <li>Snorkeling</li>
+                                    <li>Snorkeling/diving</li>
+                                    <li>Sound/bay fishing</li>
+                                    <li>Surf fishing</li>
+                                    <li>Surfing</li>
+                                    <li>Swimming</li>
+                                    <li>Water Skiing</li>
+                                    <li>Wind-surfing</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan=3>
+                                <div>
+                                    <h5>Additional information about rental rates</h5>
+                                    <strong>Cleaning Fee:</strong> $280
+                                    <p>CANCELLATION POLICY<br>Please ask the owner or check their rental agreement when booking the property. Any stay that includes a holiday is at holiday rate, weekly or nightly.
+                                    </p>
+                                    <p>50% deposit when placing your reservation. Final payment, taxes and cleaning due 60 days before arrival.</p>
+                                    <p>Payment can be made directly to our company also.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan=3>
+                                <div>
+                                    <h5>Owner's Cancellation Policy</h5>
+                                    <p>50% refund in canceled at least 30 days before arrival date.<br>100% refund if canceled at least 60 days before arrival date.<br>Service fee fully refunded on cancellations that qualify for 100% refund.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="Photos" class="scrollspy">
+        <div class="row">
+            <div class="col l3 m4 s6">
+                <a href="img/01.jpg" data-rel="lightcase:Photos">
+                    <img src="img/01_thumb.jpg" alt="123 Canal Street, &quot;The Lily Pad&quot;" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/02.jpg" data-rel="lightcase:Photos">
+                    <img src="img/02_thumb.jpg" alt="Cottage house entrance" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/03.jpg" data-rel="lightcase:Photos">
+                    <img src="img/03_thumb.jpg" alt="Main house living room" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/04.jpg" data-rel="lightcase:Photos">
+                    <img src="img/04_thumb.jpg" alt="Loft Master Bedroom" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/05.jpg" data-rel="lightcase:Photos">
+                    <img src="img/05_thumb.jpg" alt="Upstairs queen bedroom between cottage and main house" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/06.jpg" data-rel="lightcase:Photos">
+                    <img src="img/06_thumb.jpg" alt="Dining room that leads to the living room and pool deck" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/07.jpg" data-rel="lightcase:Photos">
+                    <img src="img/07_thumb.jpg" alt="Upstairs bunks" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/08.jpg" data-rel="lightcase:Photos">
+                    <img src="img/08_thumb.jpg" alt="Cottage house full kitchen" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/09.jpg" data-rel="lightcase:Photos">
+                    <img src="img/09_thumb.jpg" alt="Main house kitchen with all the appliances" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/10.jpg" data-rel="lightcase:Photos">
+                    <img src="img/10_thumb.jpg" alt="Full size H/E washer and dryer in laundry room, downstairs, HE detergent only" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/11.jpg" data-rel="lightcase:Photos">
+                    <img src="img/11_thumb.jpg" alt="Upstairs master bathroom vanities and french doors leading to master deck" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/12.jpg" data-rel="lightcase:Photos">
+                    <img src="img/12_thumb.jpg" alt="Master bath Jacuzzi tub and large walk-in shower" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/13.jpg" data-rel="lightcase:Photos">
+                    <img src="img/13_thumb.jpg" alt="Canal behind the home for kayaking (not supplied)" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/14.jpg" data-rel="lightcase:Photos">
+                    <img src="img/14_thumb.jpg" alt="View from Master bedroom deck overlooking the pool" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/15.jpg" data-rel="lightcase:Photos">
+                    <img src="img/15_thumb.jpg" alt="Upstairs cottage living room and bunks" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/16.jpg" data-rel="lightcase:Photos">
+                    <img src="img/16_thumb.jpg" alt="Backyard pool" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/17.jpg" data-rel="lightcase:Photos">
+                    <img src="img/17_thumb.jpg" alt="Grill area patio" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/18.jpg" data-rel="lightcase:Photos">
+                    <img src="img/18_thumb.jpg" alt="Downstairs main bedroom bathroom with shower only" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/19.jpg" data-rel="lightcase:Photos">
+                    <img src="img/19_thumb.jpg" alt="Upstairs cottage kitchen" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/20.jpg" data-rel="lightcase:Photos">
+                    <img src="img/20_thumb.jpg" alt="Living room access to the pool" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/21.jpg" data-rel="lightcase:Photos">
+                    <img src="img/21_thumb.jpg" alt="Patio pool oasis" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/22.jpg" data-rel="lightcase:Photos">
+                    <img src="img/22_thumb.jpg" alt="Downstairs queen with full bath" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/23.jpg" data-rel="lightcase:Photos">
+                    <img src="img/23_thumb.jpg" alt="Upstairs/cottage bathroom" class="responsive-img">
+                </a>
+            </div>
+            <div class="col l3 m4 s6">
+                <a href="img/24.jpg" data-rel="lightcase:Photos">
+                    <img src="img/24_thumb.jpg" alt="Downstairs bunk beds in main house" class="responsive-img">
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <section id="Map" class="scrollspy">
+        <h5 class="center">Map And Area Attractions</h5>
+        <div class="row">
+            <div class="col l8 offset-l2 s10 offset-s1">
+                <div class="video-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6888.112065176079!2d-86.1324395!3d30.320924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8893e51b55e5dddb%3A0x101b714fefe6c17c!2s124+Canal+St%2C+Santa+Rosa+Beach%2C+FL+32459!5e0!3m2!1sen!2sus!4v1513377729572" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/beach.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light green" href="//goo.gl/maps/2xzWdunEJpz" target="_blank">
+                            <i class="fa fa-map-marker"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Nearest Beach</span>
+                        <p>Seaside/Seagrove</p>
+                    </div>
+                    <div class="card-action">
+                        0.5 Mile Away
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/barpub.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light green" href="//www.thegreatsoutherncafe.com" target="_blank">
+                            <i class="fa fa-beer"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Nearest Barpub</span>
+                        <p>Great Southern Cafe - mojitos and more</p>
+                    </div>
+                    <div class="card-action">
+                        1 Mile Away
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/restaurant.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light green" href="//www.thegreatsoutherncafe.com" target="_blank">
+                            <i class="fa fa-cutlery"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Nearest Restaurant</span>
+                        <p>Great Southern Cafe - mojitos and more</p>
+                    </div>
+                    <div class="card-action">
+                        1 Mile Away
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/golf.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light green" href="//www.windsweptdunes.com" target="_blank">
+                            <i class="fa fa-external-link"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Nearest Golf Course</span>
+                        <p>Windswept Dunes-11 Club House Dr E, Freeport, FL</p>
+                    </div>
+                    <div class="card-action">
+                        21 Miles Away
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/airport.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light green" href="//goo.gl/maps/Kyh8JPAYYJo" target="_blank">
+                            <i class="fa fa-map-marker"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Nearest Airport</span>
+                        <p>Panama City Beach, Northwest FL Beaches Intl. Apt</p>
+                    </div>
+                    <div class="card-action">
+                        30 Miles Away
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Contact" class="scrollspy">
+        <footer class="page-footer grey darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="white-text">The Lily Pad</h5>
+                    </div>
+                    <div class="col l6 s12">
+                        <p class="grey-text text-lighten-4">
+                            124 Canal Street <br>
+                            Santa Rosa Beach, FL 32459
+                        </p>
+                    </div>
+                    <div class="col l6 s12 center">
+                        <a class="btn waves-effect green" href="//www.vrbo.com/1061011" target="_blank">
+                            Make a Reservation
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                © 2017 <a class="white-text" href="//innov8tive.io" target="_blank">Innov8tive Software</a>
+            </div>
+            </div>
+        </footer>
+    </section>
+    <!-- Required JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/readmore.min.js"></script>
+    <script type="application/javascript" src="js/lightcase.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Initialize scroll transitions and navbar anchor point
+            $('#content').pushpin({
+                top: $('#content').offset().top 
+            });
+            $('.scrollspy').scrollSpy({
+                scrollOffset: 0
+            });
+            // Initialize collapsible toggles
+            $('.collapsible').collapsible();
+            
+            // Initialize LightCase lightbox gallery
+            $('a[data-rel^=lightcase]').lightcase();
+        });
+        
+        // Initialize carousel and parameters
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        
+        // Create icon swaps for collapsibles
+        $('.collapsible').click(function() {
+            $(this).find("i.fa").toggleClass("fa-angle-right fa-angle-down");
+        });
+        
+        // Initialize Read More section and parameters
+        $('#Amenities').readmore({
+            speed: 300,
+            collapsedHeight: 600,
+            moreLink: '<div class="row read-more"><a class="btn waves-effect green reveal-button"><i class="fa fa-chevron-down left"></i> View More Amenities <i class="fa fa-chevron-down right"></i></a></div>',
+            lessLink: '<div class="row read-more"><a class="btn waves-effect green reveal-button"><i class="fa fa-chevron-up left"></i> Hide Amenities <i class="fa fa-chevron-up right"></i></a></div>'
+        });
+    </script>
+</body>
+</html>

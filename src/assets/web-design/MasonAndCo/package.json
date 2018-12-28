@@ -1,0 +1,25 @@
+{
+  "name": "mason-and-company",
+  "version": "1.0.0",
+  "description": "Public facing website for Mason & Company",
+  "main": "examples.html",
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.innov8tive.io/Innov8tive/mason-and-company.git"
+  },
+  "keywords": [
+    "styles"
+  ],
+  "author": "Shawn Smalley",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "^4.7",
+    "material-design-icons": "^3.0.1",
+    "material-icons": "^0.1.0",
+    "materialize-css": "^0.100.1"
+  }
+}
