@@ -1,16 +1,28 @@
+// Sticky footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+
+// Manual container-like padding for nav
 .nav-wrapper {
-    padding-left: 6em;
-    padding-right: 6em;
-  }
-  
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+// Custom font for page heading
 .page-title {
   font-size: 17px;
-  font-family: 'Lato', sans-serif;
   letter-spacing: .11em;
   line-height: 1em;
   text-rendering: optimizeLegibility;
 }
 
+// Nav link colors
 nav ul li.active {
   background-color: rgba(255,255,255,1);
 }

@@ -1,31 +1,51 @@
-<div class="navbar-fixed">
-  <nav class="green lighten-5 z-depth-0">
-    <div class="nav-wrapper">
-      <a *ngIf="heading" href="#" class="page-title green-text">{{heading.name | uppercase}}</a>
+<header>
+  <div class="navbar-fixed">
+    <nav class="green lighten-5 z-depth-0">
+      <div class="nav-wrapper">
+        <a *ngIf="heading" href="#" class="page-title green-text">{{heading.name | uppercase}}</a>
 
-      <a materialize="sideNav" [materializeParams]="sidenavParams" [materializeActions]="sidenavActions"
-      data-activates="nav-mobile" class="button-collapse hide-on-large-only">
-      <i class="fas fa-bars green-text"></i>
-      </a>
+        <a materialize="sideNav" [materializeParams]="sidenavParams" [materializeActions]="sidenavActions"
+        data-activates="nav-mobile" class="button-collapse hide-on-large-only">
+        <i class="fas fa-bars green-text"></i>
+        </a>
 
-      <ul class="right hide-on-med-and-down">
-        <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
-      </ul>
+        <ul class="right hide-on-med-and-down">
+          <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
+        </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li>
-          <a><i class="fas fa-times green-text" (click)="close()"></i></a>
-        </li>
-        <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route" (click)="close()">{{ menuItem.name | uppercase }}</a></li>
-        <div class="divider">
+        <ul id="nav-mobile" class="side-nav">
+          <li>
+            <a><i class="fas fa-times green-text" (click)="close()"></i></a>
+          </li>
+          <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route" (click)="close()">{{ menuItem.name | uppercase }}</a></li>
+          <div class="divider">
 
-        </div>
-      </ul>
-    </div>
-  </nav>
-</div>
-<div class="section">
-  <div class="container">
-      <router-outlet></router-outlet>
+          </div>
+        </ul>
+      </div>
+    </nav>
   </div>
-</div>
+</header>
+<main>
+  <div class="section">
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div class="row center-align white-text">
+      Made with: &nbsp;
+      <i class="fab fa-2x fa-angular"></i> &nbsp;
+      <i class="fab fa-2x fa-css3-alt"></i> &nbsp;
+      <i class="fab fa-2x fa-html5"></i> &nbsp;
+      <i class="fab fa-2x fa-sass"></i> &nbsp;
+      <i class="fab fa-2x fa-node-js"></i> &nbsp;
+      <i class="fab fa-2x fa-npm"></i> &nbsp;
+      <i class="fab fa-2x fa-github"></i> &nbsp;
+      <i class="fab fa-2x fa-font-awesome"></i> &nbsp;
+      <i class="fas fa-2x fa-coffee"></i>
+    </div>
+  </div>
+</footer>
