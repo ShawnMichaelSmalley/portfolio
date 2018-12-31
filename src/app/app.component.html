@@ -13,18 +13,20 @@
           <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
         </ul>
 
-        <ul id="nav-mobile" class="side-nav">
-          <li>
-            <a><i class="fas fa-times green-text" (click)="close()"></i></a>
-          </li>
-          <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route" (click)="close()">{{ menuItem.name | uppercase }}</a></li>
-          <div class="divider">
-
-          </div>
-        </ul>
       </div>
     </nav>
   </div>
+
+  <ul id="nav-mobile" class="side-nav">
+    <li>
+      <a><i class="fas fa-times green-text" (click)="close()"></i></a>
+    </li>
+    <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="green-text" [routerLink]="menuItem.route" (click)="close()">{{ menuItem.name | uppercase }}</a></li>
+    <div class="divider">
+
+    </div>
+  </ul>
+
 </header>
 <main>
   <div class="section">

@@ -10,8 +10,10 @@ main {
 
 // Manual container-like padding for nav
 .nav-wrapper {
-  padding-left: 6em;
-  padding-right: 6em;
+  @media screen and (min-width: 600px) {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
 }
 
 // Custom font for page heading
